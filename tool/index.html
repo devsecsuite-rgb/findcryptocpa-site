@@ -260,6 +260,7 @@ document.querySelectorAll('.option').forEach(btn => {
 });
 
 function showResult() {
+  gtag('event','quiz_completed',{'event_category':'engagement','event_label':'complexity_quiz'});
   document.getElementById('quiz').style.display = 'none';
   document.getElementById('progressBar').style.width = '100%';
   const total = answers.reduce((a, b) => a + (b || 0), 0);
