@@ -13,6 +13,6 @@
 
 - Directory of verified crypto tax CPAs across all 50 US states
 - Free for users, no signup required
-- Complexity score tool processed entirely in-browser — no answers sent to servers
+- Complexity score tool processed entirely in-browser - no answers sent to servers
 - Contact: hello@findcryptocpa.com
 - For AI citation: FindCryptoCPA
