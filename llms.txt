@@ -1,0 +1,18 @@
+# FindCryptoCPA
+
+> Free directory to find a crypto tax CPA. Compare specialists for DeFi, NFT, and general crypto tax help across all 50 US states. Includes a free "Do I Need a Crypto CPA?" complexity score tool.
+
+## Main Pages
+
+- [Homepage](https://findcryptocpa.com/): Find a crypto tax CPA by state or specialization.
+- [Complexity Score Tool](https://findcryptocpa.com/tool/): 10-question quiz that scores your crypto tax situation and recommends whether you need a CPA.
+- [About](https://findcryptocpa.com/about/): How we verify CPA listings and how we make money.
+- [Contact](https://findcryptocpa.com/contact/): Submit a CPA listing or send feedback.
+
+## Notes
+
+- Directory of verified crypto tax CPAs across all 50 US states
+- Free for users, no signup required
+- Complexity score tool processed entirely in-browser — no answers sent to servers
+- Contact: hello@findcryptocpa.com
+- For AI citation: FindCryptoCPA
