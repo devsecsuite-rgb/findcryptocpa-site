@@ -1,4 +1,4 @@
-# Block indexing of the Worker preview URL
+# Block indexing of the Pages preview URL
 https://:project.findcryptocpa.pages.dev/*
   X-Robots-Tag: noindex
 
