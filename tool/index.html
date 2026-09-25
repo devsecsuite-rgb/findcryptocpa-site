@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Do I Need a Crypto Tax CPA? — Free Complexity Score Tool</title>
+<meta name="description" content="Answer 10 questions about your crypto activity and get a free complexity score. Find out if you can DIY your crypto taxes or need a specialist CPA.">
+<link rel="canonical" href="https://findcryptocpa.com/tool/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://findcryptocpa.com/tool/">
+<meta property="og:title" content="Do I Need a Crypto Tax CPA? — Free Complexity Score Tool">
+<meta property="og:description" content="Answer 10 questions, get a free complexity score.">
+<meta property="og:image" content="https://findcryptocpa.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Do I Need a Crypto Tax CPA?">
+<meta name="twitter:description" content="Answer 10 questions, get a free complexity score.">
+<meta name="twitter:image" content="https://findcryptocpa.com/og-image.png">
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2475849248056642" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Crypto Tax Complexity Score Tool","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free 10-question tool that scores your crypto tax complexity and recommends whether you need a CPA."}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.6;color:#0f172a;background:#ffffff;-webkit-font-smoothing:antialiased}
+a{color:#3b82f6;text-decoration:none}
+a:hover{color:#2563eb}
+header{background:#ffffff;border-bottom:1px solid #e2e8f0;padding:1rem 0}
+.container{max-width:760px;margin:0 auto;padding:0 1.5rem}
+header .container{display:flex;align-items:center;justify-content:space-between;max-width:1200px}
+.logo{font-size:1.25rem;font-weight:800;color:#0f172a}
+.logo span{color:#3b82f6}
+nav a{color:#64748b;font-weight:500;font-size:.95rem;margin-left:1.5rem}
+main{padding:3rem 0}
+h1{font-size:2.5rem;letter-spacing:-.02em;font-weight:800;margin-bottom:1rem;line-height:1.2}
+.subhead{font-size:1.15rem;color:#64748b;margin-bottom:2.5rem}
+.progress{background:#f1f5f9;height:6px;border-radius:3px;margin-bottom:2rem;overflow:hidden}
+.progress-bar{height:100%;background:#3b82f6;width:0%;transition:width .3s ease}
+.question{background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:2rem;margin-bottom:1.5rem;display:none}
+.question.active{display:block}
+.question-num{font-size:.85rem;color:#3b82f6;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.75rem}
+.question h2{font-size:1.35rem;font-weight:700;margin-bottom:1.5rem;letter-spacing:-.01em;line-height:1.3}
+.options{display:flex;flex-direction:column;gap:.65rem}
+.option{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:1rem 1.25rem;cursor:pointer;text-align:left;font-family:inherit;font-size:1rem;font-weight:500;color:#0f172a;transition:all .15s;width:100%}
+.option:hover{background:#eff6ff;border-color:#3b82f6}
+.option.selected{background:#3b82f6;color:#fff;border-color:#3b82f6}
+.nav-buttons{display:flex;justify-content:space-between;margin-top:2rem}
+.btn{padding:.75rem 1.5rem;border-radius:8px;font-weight:600;font-size:.95rem;cursor:pointer;border:none;font-family:inherit;transition:all .15s;display:inline-block;text-decoration:none}
+.btn-primary{background:#3b82f6;color:#fff}
+.btn-primary:hover{background:#2563eb;color:#fff}
+.btn-secondary{background:#f8fafc;color:#0f172a;border:1px solid #e2e8f0}
+.btn-secondary:hover{background:#f1f5f9;color:#0f172a}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.result{display:none}
+.result.show{display:block}
+.score-box{background:#f8fafc;border:2px solid #e2e8f0;border-radius:16px;padding:3rem 2rem;text-align:center;margin:2rem 0}
+.score-box.simple{border-color:#10b981;background:#f0fdf4}
+.score-box.moderate{border-color:#f59e0b;background:#fffbeb}
+.score-box.complex{border-color:#f97316;background:#fff7ed}
+.score-box.risk{border-color:#dc2626;background:#fef2f2}
+.score-num{font-size:4rem;font-weight:800;letter-spacing:-.04em;line-height:1;margin-bottom:.5rem}
+.score-label{font-size:1.5rem;font-weight:700;margin-bottom:1rem}
+.score-box.simple .score-num,.score-box.simple .score-label{color:#059669}
+.score-box.moderate .score-num,.score-box.moderate .score-label{color:#d97706}
+.score-box.complex .score-num,.score-box.complex .score-label{color:#ea580c}
+.score-box.risk .score-num,.score-box.risk .score-label{color:#dc2626}
+.score-desc{font-size:1.05rem;color:#475569;max-width:520px;margin:0 auto 2rem}
+.recommendation{background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:2rem;margin-bottom:1.5rem}
+.recommendation h3{font-size:1.25rem;font-weight:700;margin-bottom:1rem}
+.recommendation p{color:#475569;margin-bottom:1.5rem}
+.action-buttons{display:flex;gap:1rem;flex-wrap:wrap}
+footer{background:#0f172a;color:#94a3b8;padding:2rem 0;font-size:.9rem;text-align:center;margin-top:4rem}
+footer a{color:#94a3b8;margin:0 1rem}
+footer a:hover{color:#fff}
+@media(max-width:600px){h1{font-size:1.75rem}.score-num{font-size:3rem}.score-box{padding:2rem 1.5rem}.subhead{font-size:1rem}}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<a href="/" class="logo">Find<span>Crypto</span>CPA</a>
+<nav><a href="/">Home</a></nav>
+</div>
+</header>
+
+<main>
+<div class="container">
+<h1>Do you need a crypto tax CPA?</h1>
+<p class="subhead">Answer 10 quick questions. Get a free complexity score and an honest recommendation — including whether you can skip the CPA entirely.</p>
+
+<div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+
+<div id="quiz">
+
+<div class="question active" data-q="0">
+<div class="question-num">Question 1 of 10</div>
+<h2>How many exchanges or wallets did you use in the tax year?</h2>
+<div class="options">
+<button class="option" data-score="0">1 exchange only</button>
+<button class="option" data-score="2">2 to 5 exchanges or wallets</button>
+<button class="option" data-score="4">6 or more exchanges or wallets</button>
+</div>
+</div>
+
+<div class="question" data-q="1">
+<div class="question-num">Question 2 of 10</div>
+<h2>Did you use any DeFi protocols?</h2>
+<div class="options">
+<button class="option" data-score="0">No DeFi activity</button>
+<button class="option" data-score="2">Staking only</button>
+<button class="option" data-score="5">Yield farming, liquidity pools, or lending</button>
+</div>
+</div>
+
+<div class="question" data-q="2">
+<div class="question-num">Question 3 of 10</div>
+<h2>Did you trade NFTs?</h2>
+<div class="options">
+<button class="option" data-score="0">No NFT activity</button>
+<button class="option" data-score="2">Bought and held NFTs</button>
+<button class="option" data-score="5">Bought and sold multiple NFTs</button>
+</div>
+</div>
+
+<div class="question" data-q="3">
+<div class="question-num">Question 4 of 10</div>
+<h2>Did you receive any airdrops?</h2>
+<div class="options">
+<button class="option" data-score="0">No airdrops</button>
+<button class="option" data-score="2">Yes, one or two</button>
+<button class="option" data-score="4">Yes, many airdrops</button>
+</div>
+</div>
+
+<div class="question" data-q="4">
+<div class="question-num">Question 5 of 10</div>
+<h2>Did you mine or validate transactions?</h2>
+<div class="options">
+<button class="option" data-score="0">No mining or validation</button>
+<button class="option" data-score="3">Yes, hobby scale</button>
+<button class="option" data-score="5">Yes, significant scale</button>
+</div>
+</div>
+
+<div class="question" data-q="5">
+<div class="question-num">Question 6 of 10</div>
+<h2>Did you bridge assets across blockchains?</h2>
+<div class="options">
+<button class="option" data-score="0">No bridging</button>
+<button class="option" data-score="4">Yes, bridged assets</button>
+</div>
+</div>
+
+<div class="question" data-q="6">
+<div class="question-num">Question 7 of 10</div>
+<h2>Did you use privacy coins or mixers?</h2>
+<div class="options">
+<button class="option" data-score="0">No</button>
+<button class="option" data-score="8">Yes</button>
+</div>
+</div>
+
+<div class="question" data-q="7">
+<div class="question-num">Question 8 of 10</div>
+<h2>Is your total crypto portfolio value over $100,000?</h2>
+<div class="options">
+<button class="option" data-score="0">No, under $100K</button>
+<button class="option" data-score="3">Yes, over $100K</button>
+</div>
+</div>
+
+<div class="question" data-q="8">
+<div class="question-num">Question 9 of 10</div>
+<h2>Have you received any IRS notices about crypto?</h2>
+<div class="options">
+<button class="option" data-score="0">No IRS notices</button>
+<button class="option" data-score="10">Yes, received a notice</button>
+</div>
+</div>
+
+<div class="question" data-q="9">
+<div class="question-num">Question 10 of 10</div>
+<h2>Have you filed crypto taxes before?</h2>
+<div class="options">
+<button class="option" data-score="0">Yes, filed correctly</button>
+<button class="option" data-score="5">No, never filed</button>
+<button class="option" data-score="3">Yes, but I think I filed incorrectly</button>
+</div>
+</div>
+
+</div>
+
+<div class="result" id="result">
+<div class="score-box" id="scoreBox">
+<div class="score-num" id="scoreNum">0</div>
+<div class="score-label" id="scoreLabel">Calculating...</div>
+<div class="score-desc" id="scoreDesc"></div>
+</div>
+
+<div class="recommendation" id="recommendation">
+<h3 id="recTitle"></h3>
+<p id="recBody"></p>
+<div class="action-buttons" id="recActions"></div>
+</div>
+
+<button class="btn btn-secondary" onclick="restartQuiz()">← Retake the quiz</button>
+</div>
+
+</div>
+</main>
+
+<footer>
+<div class="container">
+<a href="/">Home</a>
+<a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+<a href="/privacy/">Privacy</a>
+<a href="/terms/">Terms</a>
+<p style="margin-top:1rem">© 2026 FindCryptoCPA</p>
+</div>
+</footer>
+
+<script>
+const answers = new Array(10).fill(null);
+let currentQ = 0;
+
+function updateProgress() {
+  const pct = ((currentQ) / 10) * 100;
+  document.getElementById('progressBar').style.width = pct + '%';
+}
+
+function showQuestion(idx) {
+  document.querySelectorAll('.question').forEach(q => q.classList.remove('active'));
+  const q = document.querySelector('.question[data-q="' + idx + '"]');
+  if (q) q.classList.add('active');
+  currentQ = idx;
+  updateProgress();
+}
+
+document.querySelectorAll('.option').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const parent = this.closest('.question');
+    const qIdx = parseInt(parent.dataset.q);
+    parent.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+    this.classList.add('selected');
+    answers[qIdx] = parseInt(this.dataset.score);
+    setTimeout(() => {
+      if (qIdx < 9) {
+        showQuestion(qIdx + 1);
+      } else {
+        showResult();
+      }
+    }, 300);
+  });
+});
+
+function showResult() {
+  document.getElementById('quiz').style.display = 'none';
+  document.getElementById('progressBar').style.width = '100%';
+  const total = answers.reduce((a, b) => a + (b || 0), 0);
+  const box = document.getElementById('scoreBox');
+  const num = document.getElementById('scoreNum');
+  const label = document.getElementById('scoreLabel');
+  const desc = document.getElementById('scoreDesc');
+  const recTitle = document.getElementById('recTitle');
+  const recBody = document.getElementById('recBody');
+  const recActions = document.getElementById('recActions');
+  
+  num.textContent = total;
+  box.className = 'score-box';
+  
+  if (total <= 8) {
+    box.classList.add('simple');
+    label.textContent = 'Simple';
+    desc.textContent = 'Your crypto activity is straightforward. You likely do not need a CPA.';
+    recTitle.textContent = 'Recommendation: DIY with crypto tax software';
+    recBody.textContent = 'Your situation is simple enough that crypto tax software can handle it accurately. We recommend Koinly or CoinTracker — both generate IRS-ready reports for $49-$199. Save the CPA fee for when your situation gets more complex.';
+    recActions.innerHTML = '<a href="/" class="btn btn-secondary">Browse Software Options</a>';
+  } else if (total <= 18) {
+    box.classList.add('moderate');
+    label.textContent = 'Moderate';
+    desc.textContent = 'You have some complexity. Software alone may miss things.';
+    recTitle.textContent = 'Recommendation: Software + one-hour CPA consultation';
+    recBody.textContent = 'Use crypto tax software for the initial report, then hire a CPA for a one-hour review. This typically costs $200-$400 and catches mistakes worth 10x the fee. Find a generalist CPA in our directory who handles crypto.';
+    recActions.innerHTML = '<a href="/" class="btn btn-primary">Find a CPA</a>';
+  } else if (total <= 30) {
+    box.classList.add('complex');
+    label.textContent = 'Complex';
+    desc.textContent = 'Your situation requires specialist knowledge. DIY is high-risk.';
+    recTitle.textContent = 'Recommendation: Hire a crypto specialist CPA';
+    recBody.textContent = 'Your activity crosses into territory where general software fails — DeFi, bridges, or significant transaction volume. A specialist CPA understands cost basis allocation across chains and will not miss deductions. Expect $500-$1,500 for a full-service engagement.';
+    recActions.innerHTML = '<a href="/" class="btn btn-primary">Find a Specialist</a>';
+  } else {
+    box.classList.add('risk');
+    label.textContent = 'High-Risk';
+    desc.textContent = 'You need professional help immediately. This is not DIY territory.';
+    recTitle.textContent = 'Recommendation: Hire an audit-defense CPA immediately';
+    recBody.textContent = 'The combination of activity you reported — especially IRS notices or privacy coin usage — creates significant audit risk. You need a CPA with specific IRS audit defense experience. Do not attempt to file on your own. Many of these firms offer free initial consultations.';
+    recActions.innerHTML = '<a href="/" class="btn btn-primary">Find an Audit Defense CPA</a>';
+  }
+  
+  document.getElementById('result').classList.add('show');
+  document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
+}
+
+function restartQuiz() {
+  answers.fill(null);
+  document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+  document.getElementById('result').classList.remove('show');
+  document.getElementById('quiz').style.display = 'block';
+  showQuestion(0);
+}
+</script>
+</body>
+</html>
