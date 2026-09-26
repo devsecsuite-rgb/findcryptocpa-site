@@ -13,21 +13,19 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-
-      - name: Generate pages and rebuild sitemap
+      - name: Generate pages
+        run: python scripts/generate_state_pages.py --force
+      - name: Rebuild sitemap
+        run: python scripts/update_sitemap.py
+      - name: Commit and push
         run: |
-          run: python scripts/generate_state_pages.py --force
-          python scripts/update_sitemap.py
-
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: Generate state pages and rebuild sitemap
-          file_pattern: "crypto-tax-cpa/** sitemap.xml index.html"
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add -A
+          git commit -m "Generate state pages and rebuild sitemap" || echo "No changes"
+          git push
