@@ -23,7 +23,7 @@ jobs:
 
       - name: Generate pages and rebuild sitemap
         run: |
-          python scripts/generate_state_pages.py --force
+          python scripts/generate_state_pages.py
           python scripts/update_sitemap.py
 
       - name: Commit changes
