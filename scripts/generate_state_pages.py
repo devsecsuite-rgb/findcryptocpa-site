@@ -14,14 +14,10 @@ def load_csv(path):
         return list(csv.DictReader(f))
 
 
-def build_cpa_cards(cpas):
-    if not cpas:
-        return '<p style="color:#64748b">No CPAs listed yet for this state. Check back soon or submit yours via the contact page.</p>'
-    cards = []
-    for c in cpas:
-        initials = c.get('initials') or ''.join([w[0] for w in c['name'].split()[:2]]).upper()
-        tags = ''.join(f'<span class="tag">{t.strip()}</span>' for t in c['tags'].split('|') if t.strip())
-        cards.append(f'''<div class="cpa-card">
+def build_cpa_card(c):
+    initials = c.get('initials') or ''.join([w[0] for w in c['name'].split()[:2]]).upper()
+    tags = ''.join(f'<span class="tag">{t.strip()}</span>' for t in c['tags'].split('|') if t.strip())
+    return f'''<div class="cpa-card">
 <div class="cpa-header">
 <div class="cpa-avatar">{initials}</div>
 <div>
@@ -35,8 +31,26 @@ def build_cpa_cards(cpas):
 <span>Price: <strong>{c.get('price','Contact for quote')}</strong></span>
 <span>Verified ✓</span>
 </div>
-</div>''')
-    return '\n'.join(cards)
+</div>'''
+
+
+def build_cpa_section(cpas, state_name):
+    if cpas:
+        cards = '\n'.join(build_cpa_card(c) for c in cpas)
+        count = len(cpas)
+        return f'''<div class="section-title">
+<h2>{count} Verified Crypto Tax CPA{'s' if count != 1 else ''} in {state_name}</h2>
+<p>Featured professionals with crypto-specific expertise</p>
+</div>
+<div class="grid">
+{cards}
+</div>'''
+    # Empty state — looks intentional, not broken
+    return f'''<div style="background:#f8fafc;border:2px dashed #cbd5e1;border-radius:12px;padding:3rem 2rem;text-align:center;margin-bottom:2rem">
+<h2 style="font-size:1.5rem;font-weight:800;color:#0f172a;margin-bottom:.75rem">Crypto Tax CPAs in {state_name}</h2>
+<p style="color:#64748b;font-size:1.05rem;max-width:560px;margin:0 auto 1.5rem">We're currently verifying CPA firms for {state_name}. If you're a licensed CPA with crypto tax experience, submit your firm for a free listing.</p>
+<a href="/contact/" class="btn">Submit Your Firm →</a>
+</div>'''
 
 
 def build_cpa_list_json(cpas):
@@ -60,20 +74,14 @@ def build_criteria(criteria_str):
 
 
 def update_homepage_state_links(states):
-    """Replace everything between STATE_LINKS_START and STATE_LINKS_END markers."""
     if not HOMEPAGE.exists():
         print("SKIP homepage (index.html not found)")
         return
-
     content = HOMEPAGE.read_text(encoding='utf-8')
-
     if '<!-- STATE_LINKS_START -->' not in content or '<!-- STATE_LINKS_END -->' not in content:
-        print("SKIP homepage (markers not found — add <!-- STATE_LINKS_START --> and <!-- STATE_LINKS_END -->)")
+        print("SKIP homepage (markers not found)")
         return
-
-    # Sort states alphabetically
     sorted_states = sorted(states, key=lambda s: s['state_name'].strip())
-
     links = []
     for s in sorted_states:
         name = s['state_name'].strip()
@@ -83,16 +91,13 @@ def update_homepage_state_links(states):
             f'background:#ffffff;border:1px solid #e2e8f0;border-radius:8px;color:#0f172a;font-weight:600;'
             f'font-size:.9rem;text-decoration:none;margin:.25rem">{name}</a>'
         )
-
     block = '\n'.join(links) if links else '      <p style="color:#64748b">No states listed yet.</p>'
-
     new_content = re.sub(
         r'<!-- STATE_LINKS_START -->.*?<!-- STATE_LINKS_END -->',
         f'<!-- STATE_LINKS_START -->\n{block}\n      <!-- STATE_LINKS_END -->',
         content,
         flags=re.S
     )
-
     HOMEPAGE.write_text(new_content, encoding='utf-8')
     print(f"Updated homepage with {len(sorted_states)} state links")
 
@@ -127,7 +132,7 @@ def main():
             '{{TOP_CITY_3}}': s['top_city_3'].strip(),
             '{{CPA_COUNT}}': str(len(state_cpas)),
             '{{CPA_LIST_JSON}}': build_cpa_list_json(state_cpas),
-            '{{CPA_CARDS}}': build_cpa_cards(state_cpas),
+            '{{CPA_SECTION}}': build_cpa_section(state_cpas, s['state_name'].strip()),
             '{{STATE_TAX_RATE}}': s['state_tax_rate'].strip(),
             '{{CRYPTO_HOLDERS}}': s['crypto_holders'].strip(),
             '{{CPA_FEE_RANGE}}': s['cpa_fee_range'].strip(),
@@ -145,7 +150,6 @@ def main():
         out_file.write_text(html, encoding='utf-8')
         print(f"WROTE {out_file}")
 
-    # Now update the homepage state links
     update_homepage_state_links(states)
 
 
