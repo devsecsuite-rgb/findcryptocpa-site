@@ -6,7 +6,6 @@ on:
       - 'data/**'
       - 'templates/**'
       - 'scripts/**'
-      - 'sitemap.xml'
   workflow_dispatch:
 
 jobs:
@@ -22,7 +21,7 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Generate pages
+      - name: Generate pages and rebuild sitemap
         run: |
           python scripts/generate_state_pages.py --force
           python scripts/update_sitemap.py
@@ -30,5 +29,5 @@ jobs:
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Generate state pages from CSV"
+          commit_message: "Generate state pages and rebuild sitemap"
           file_pattern: "crypto-tax-cpa/** sitemap.xml"
