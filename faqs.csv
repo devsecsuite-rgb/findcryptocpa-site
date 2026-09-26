@@ -1,0 +1,5 @@
+state_slug,question,answer
+illinois,Does Illinois tax cryptocurrency differently than the federal government?,"No. Illinois conforms to federal treatment of crypto as property. Every trade, swap, or purchase with crypto is a taxable event. The state applies a 4.95% flat income tax to crypto capital gains."
+illinois,Does Illinois tax staking and mining rewards?,"Yes. Staking and mining rewards are treated as ordinary income at fair market value when received, taxed at Illinois' 4.95% flat rate. They then establish a new cost basis for future capital gains calculations."
+illinois,Can I use crypto losses to offset Illinois income?,"Yes, up to $3,000 per year in net capital losses can offset ordinary income, with the remainder carried forward. Illinois conforms to federal capital loss rules."
+illinois,Do I need to report crypto on my Illinois state return?,"Yes. The Illinois Department of Revenue requires you to report all capital gains and losses, including crypto. Illinois has been increasingly cross-referencing IRS data to catch unreported crypto gains."
