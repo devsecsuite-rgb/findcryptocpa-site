@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
-import csv, json, argparse
+import csv, json, argparse, re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 TEMPLATE = ROOT / "templates" / "state-template.html"
 OUT = ROOT / "crypto-tax-cpa"
+HOMEPAGE = ROOT / "index.html"
+
 
 def load_csv(path):
     with open(path, newline='', encoding='utf-8') as f:
         return list(csv.DictReader(f))
+
 
 def build_cpa_cards(cpas):
     if not cpas:
@@ -35,22 +38,64 @@ def build_cpa_cards(cpas):
 </div>''')
     return '\n'.join(cards)
 
+
 def build_cpa_list_json(cpas):
     items = []
     for i, c in enumerate(cpas, 1):
         items.append({"@type": "ListItem", "position": i, "name": c['firm'] or c['name']})
     return json.dumps(items, separators=(',', ':'), ensure_ascii=False)
 
+
 def build_faq(faqs):
     if not faqs:
         return '<p style="color:#64748b">FAQs coming soon.</p>'
     return '\n'.join(f'<h3>{f["question"]}</h3>\n<p>{f["answer"]}</p>' for f in faqs)
+
 
 def build_criteria(criteria_str):
     if not criteria_str:
         return '<li>Federal crypto tax expertise</li><li>Experience with state tax authority</li>'
     items = [c.strip() for c in criteria_str.split('|') if c.strip()]
     return '\n'.join(f'<li>{i}</li>' for i in items)
+
+
+def update_homepage_state_links(states):
+    """Replace everything between STATE_LINKS_START and STATE_LINKS_END markers."""
+    if not HOMEPAGE.exists():
+        print("SKIP homepage (index.html not found)")
+        return
+
+    content = HOMEPAGE.read_text(encoding='utf-8')
+
+    if '<!-- STATE_LINKS_START -->' not in content or '<!-- STATE_LINKS_END -->' not in content:
+        print("SKIP homepage (markers not found — add <!-- STATE_LINKS_START --> and <!-- STATE_LINKS_END -->)")
+        return
+
+    # Sort states alphabetically
+    sorted_states = sorted(states, key=lambda s: s['state_name'].strip())
+
+    links = []
+    for s in sorted_states:
+        name = s['state_name'].strip()
+        slug = s['state_slug'].strip()
+        links.append(
+            f'      <a href="/crypto-tax-cpa/{slug}/" style="display:inline-block;padding:.65rem 1.25rem;'
+            f'background:#ffffff;border:1px solid #e2e8f0;border-radius:8px;color:#0f172a;font-weight:600;'
+            f'font-size:.9rem;text-decoration:none;margin:.25rem">{name}</a>'
+        )
+
+    block = '\n'.join(links) if links else '      <p style="color:#64748b">No states listed yet.</p>'
+
+    new_content = re.sub(
+        r'<!-- STATE_LINKS_START -->.*?<!-- STATE_LINKS_END -->',
+        f'<!-- STATE_LINKS_START -->\n{block}\n      <!-- STATE_LINKS_END -->',
+        content,
+        flags=re.S
+    )
+
+    HOMEPAGE.write_text(new_content, encoding='utf-8')
+    print(f"Updated homepage with {len(sorted_states)} state links")
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -99,6 +144,10 @@ def main():
         out_dir.mkdir(parents=True, exist_ok=True)
         out_file.write_text(html, encoding='utf-8')
         print(f"WROTE {out_file}")
+
+    # Now update the homepage state links
+    update_homepage_state_links(states)
+
 
 if __name__ == '__main__':
     main()
