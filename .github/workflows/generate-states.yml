@@ -29,5 +29,5 @@ jobs:
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Generate state pages and rebuild sitemap"
-            file_pattern: "crypto-tax-cpa/** sitemap.xml index.html"
+          commit_message: Generate state pages and rebuild sitemap
+          file_pattern: "crypto-tax-cpa/** sitemap.xml index.html"
