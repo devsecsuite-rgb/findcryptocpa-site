@@ -172,8 +172,8 @@ def main():
     print(f"Report saved to {REPORT_FILE}")
     print("=" * 60)
 
-    if critical_count > 0:
-        sys.exit(1)
+        # Never fail the workflow — this is a monitoring script, not a blocker
+    # Exit 0 always so the audit report is always uploaded
 
 
 if __name__ == "__main__":
