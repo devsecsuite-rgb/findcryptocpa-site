@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Generate pages
-        run: python scripts/generate_state_pages.py --force
+        run: python scripts/generate_state_pages.py
       - name: Rebuild sitemap
         run: python scripts/update_sitemap.py
       - name: Commit and push
