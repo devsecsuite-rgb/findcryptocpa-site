@@ -19,11 +19,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FwLYPCBN7B"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FwLYPCBN7B');</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ItemList","name":"Crypto Tax CPAs in New York","url":"https://findcryptocpa.com/crypto-tax-cpa/new-york/","numberOfItems":0,"itemListElement":[[]]}
-</script>
+
+<!-- Dynamic Schemas injected by Python -->
+
+
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.6;color:#0f172a;background:#ffffff;-webkit-font-smoothing:antialiased}
@@ -45,6 +48,12 @@ section{padding:3rem 0}
 .section-title h2{font-size:1.75rem;letter-spacing:-.02em;font-weight:800;margin-bottom:.5rem}
 .section-title p{color:#64748b;font-size:1.05rem}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem}
+
+/* Tax Notes Box */
+.tax-notes-box{background:#eff6ff;border-left:4px solid #3b82f6;padding:1.5rem;border-radius:0 8px 8px 0;margin-bottom:2.5rem}
+.tax-notes-box h2{font-size:1.35rem;font-weight:800;color:#1e3a8a;margin-bottom:.75rem;border-bottom:1px solid #bfdbfe;padding-bottom:.5rem}
+.tax-notes-box p{color:#1e40af;font-size:1.05rem;line-height:1.7}
+
 .cpa-card{background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;transition:all .15s}
 .cpa-card:hover{border-color:#cbd5e1;box-shadow:0 4px 12px rgba(15,23,42,.06)}
 .cpa-header{display:flex;align-items:center;gap:.85rem;margin-bottom:1rem}
@@ -57,16 +66,27 @@ section{padding:3rem 0}
 .tag{background:#f1f5f9;color:#475569;padding:.2rem .65rem;border-radius:999px;font-size:.75rem;font-weight:600}
 .cpa-meta{display:flex;justify-content:space-between;font-size:.85rem;color:#64748b;padding-top:1rem;border-top:1px solid #f1f5f9;margin-top:1rem}
 .cpa-meta strong{color:#0f172a}
+
 .info-box{background:#f8fafc;border-left:4px solid #3b82f6;border-radius:8px;padding:1.5rem;margin:1.5rem 0}
 .info-box h3{font-size:1.1rem;font-weight:700;margin-bottom:.75rem}
 .info-box p{color:#475569;margin-bottom:.75rem}
 .info-box ul{margin:0 0 1rem 1.25rem;color:#475569}
 .info-box li{margin-bottom:.5rem}
+
+/* FAQ Styles for Extractability */
+.faq-section { margin-top: 2.5rem; }
+.faq-section h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 1.5rem; }
+.faq-item { border-bottom: 1px solid #e2e8f0; padding: 1.25rem 0; }
+.faq-item:last-child { border-bottom: none; }
+.faq-item h3 { font-size: 1.1rem; font-weight: 700; color: #0f172a; margin-bottom: .5rem; }
+.faq-item p { color: #475569; font-size: .95rem; line-height: 1.6; }
+
 .cta-banner{background:#0f172a;color:#fff;border-radius:16px;padding:2.5rem;margin:2rem 0;text-align:center}
 .cta-banner h3{font-size:1.5rem;font-weight:800;margin-bottom:.75rem;color:#fff}
 .cta-banner p{color:#94a3b8;margin-bottom:1.5rem}
 .btn{display:inline-block;padding:.85rem 1.75rem;border-radius:8px;font-weight:600;font-size:.95rem;background:#3b82f6;color:#fff;transition:all .15s}
 .btn:hover{background:#2563eb;color:#fff}
+
 footer{background:#0f172a;color:#94a3b8;padding:3rem 0 2rem;font-size:.9rem}
 footer .container{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem}
 footer h4{color:#fff;font-size:.85rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:1rem;font-weight:700}
@@ -98,6 +118,13 @@ footer a:hover{color:#fff}
 
 <section>
 <div class="container">
+
+<!-- NEW: State Tax Notes Section -->
+<div class="tax-notes-box">
+<h2>Crypto Tax Rules in New York</h2>
+<p>New York taxes crypto gains as capital gains, with top state rates reaching 10.9%. If you live in New York City, you may also be subject to local city income tax, pushing the combined top rate even higher. New York also requires crypto businesses operating in the state to hold a BitLicense, which carries specific tax and reporting implications for business owners.</p>
+</div>
+
 <div style="background:#f8fafc;border:2px dashed #cbd5e1;border-radius:12px;padding:3rem 2rem;text-align:center;margin-bottom:2rem">
 <h2 style="font-size:1.5rem;font-weight:800;color:#0f172a;margin-bottom:.75rem">Crypto Tax CPAs in New York</h2>
 <p style="color:#64748b;font-size:1.05rem;max-width:560px;margin:0 auto 1.5rem">We're currently verifying CPA firms for New York. If you're a licensed CPA with crypto tax experience, submit your firm for a free listing.</p>
@@ -120,8 +147,11 @@ footer a:hover{color:#fff}
 <li>Familiarity with BitLicense tax implications for business owners</li>
 <li>Experience with multi-state filing for NY-based remote workers</li>
 </ul>
+</div>
 
-<h3>Frequently Asked Questions</h3>
+<!-- NEW: Styled FAQ Section -->
+<div class="faq-section">
+<h2>Frequently Asked Questions: New York Crypto Taxes</h2>
 <p style="color:#64748b">FAQs coming soon.</p>
 </div>
 
@@ -140,6 +170,7 @@ footer a:hover{color:#fff}
 <h4>FindCryptoCPA</h4>
 <a href="/about/">About</a>
 <a href="/contact/">Contact</a>
+<a href="/methodology/">Methodology</a>
 <a href="/tool/">Complexity Tool</a>
 </div>
 <div>
