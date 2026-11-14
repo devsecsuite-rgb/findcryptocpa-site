@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-"""
-On-page SEO audit for static sites.
-Crawls sitemap.xml, checks every page, scores 0-100, reports issues.
-"""
 import os
 import sys
 import re
@@ -22,15 +18,12 @@ except ImportError:
 SITE_URL = os.environ.get("SITE_URL", "https://findcryptocpa.com")
 SITEMAP_URL = f"{SITE_URL}/sitemap.xml"
 REPORT_FILE = "seo_report.json"
-
 UA = "Mozilla/5.0 (compatible; SEOAuditBot/1.0)"
-
 
 def fetch(url):
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     with urllib.request.urlopen(req, timeout=30) as resp:
         return resp.status, resp.read().decode("utf-8", errors="replace")
-
 
 def get_sitemap_urls():
     try:
@@ -41,7 +34,6 @@ def get_sitemap_urls():
     except Exception as e:
         print(f"Sitemap failed: {e}")
         return []
-
 
 def audit_page(url):
     issues = []
@@ -58,25 +50,28 @@ def audit_page(url):
 
     soup = BeautifulSoup(html, "html.parser")
 
+    # 1. Title Tag
     title = soup.find("title")
     if not title or not title.text.strip():
         issues.append("Missing or empty <title>")
         score -= 15
-    elif len(title.text) > 60:
+    elif len(title.text) > 65:
         warnings.append(f"Title too long ({len(title.text)} chars)")
         score -= 3
     elif len(title.text) < 30:
         warnings.append(f"Title too short ({len(title.text)} chars)")
         score -= 2
 
+    # 2. Meta Description
     desc = soup.find("meta", attrs={"name": "description"})
     if not desc or not desc.get("content", "").strip():
         issues.append("Missing meta description")
         score -= 15
-    elif len(desc["content"]) > 160:
+    elif len(desc["content"]) > 165:
         warnings.append(f"Meta description too long ({len(desc['content'])} chars)")
         score -= 3
 
+    # 3. Headings
     h1s = soup.find_all("h1")
     if len(h1s) == 0:
         issues.append("Missing H1")
@@ -85,11 +80,13 @@ def audit_page(url):
         warnings.append(f"Multiple H1 tags ({len(h1s)})")
         score -= 5
 
+    # 4. Canonical
     canonical = soup.find("link", attrs={"rel": "canonical"})
     if not canonical:
         issues.append("Missing canonical tag")
         score -= 10
 
+    # 5. OG Tags
     og_title = soup.find("meta", attrs={"property": "og:title"})
     og_desc = soup.find("meta", attrs={"property": "og:description"})
     og_image = soup.find("meta", attrs={"property": "og:image"})
@@ -98,26 +95,48 @@ def audit_page(url):
         warnings.append(f"Missing OG tags: {', '.join(missing_og)}")
         score -= 5
 
+    # 6. Robots Meta
     robots = soup.find("meta", attrs={"name": "robots"})
     if robots and "noindex" in robots.get("content", "").lower():
-        # Allow noindex on thank-you page
         if "/thank-you/" not in url:
             issues.append("CRITICAL: noindex directive")
             score -= 50
 
+    # 7. JSON-LD Schema Check (NEW: specifically look for FAQPage and Article)
     jsonld = soup.find_all("script", attrs={"type": "application/ld+json"})
     if not jsonld:
-        warnings.append("No JSON-LD structured data")
+        warnings.append("No JSON-LD structured data found")
         score -= 5
+    else:
+        schema_text = " ".join([script.string for script in jsonld if script.string])
+        if "FAQPage" in schema_text:
+            pass # Good!
+        elif "/guides/" in url or "/specializations/" in url:
+            warnings.append("Missing FAQPage schema on a guide/specialization page")
+            score -= 5
 
+    # 8. Viewport
     viewport = soup.find("meta", attrs={"name": "viewport"})
     if not viewport:
         issues.append("Missing viewport meta tag")
         score -= 10
 
+    # 9. HTTPS
     if not url.startswith("https://"):
         issues.append("Not served over HTTPS")
         score -= 20
+
+    # 10. Thin Content Check (NEW)
+    body = soup.find("body")
+    if body:
+        text = body.get_text(separator=" ", strip=True)
+        words = len(text.split())
+        if words < 300:
+            issues.append(f"THIN CONTENT: Only {words} words")
+            score -= 20
+        elif words < 600 and "/crypto-tax-cpa/" not in url:
+            warnings.append(f"Content could be deeper ({words} words)")
+            score -= 5
 
     return {
         "url": url,
@@ -125,7 +144,6 @@ def audit_page(url):
         "issues": issues,
         "warnings": warnings,
     }
-
 
 def main():
     print(f"Auditing {SITE_URL}")
@@ -171,10 +189,6 @@ def main():
     print(f"Critical issues: {critical_count}")
     print(f"Report saved to {REPORT_FILE}")
     print("=" * 60)
-
-        # Never fail the workflow — this is a monitoring script, not a blocker
-    # Exit 0 always so the audit report is always uploaded
-
 
 if __name__ == "__main__":
     main()
