@@ -1,22 +1,18 @@
 {
   "site": "https://findcryptocpa.com",
-  "audited_at": "2026-11-14T12:35:38.130601Z",
-  "pages_audited": 20,
-  "average_score": 89.0,
-  "critical_issues": 6,
+  "audited_at": "2026-11-14T13:56:17.309685Z",
+  "pages_audited": 23,
+  "average_score": 94.3,
+  "critical_issues": 3,
   "results": [
     {
       "url": "https://findcryptocpa.com/",
-      "score": 100,
-      "issues": [],
-      "warnings": []
-    },
-    {
-      "url": "https://findcryptocpa.com/tool/",
-      "score": 95,
-      "issues": [],
+      "score": 75,
+      "issues": [
+        "THIN CONTENT: Only 248 words"
+      ],
       "warnings": [
-        "Content could be deeper (337 words)"
+        "No JSON-LD structured data found"
       ]
     },
     {
@@ -36,11 +32,121 @@
       "warnings": []
     },
     {
+      "url": "https://findcryptocpa.com/crypto-tax-cpa/california/",
+      "score": 100,
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "url": "https://findcryptocpa.com/crypto-tax-cpa/florida/",
+      "score": 100,
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "url": "https://findcryptocpa.com/crypto-tax-cpa/illinois/",
+      "score": 100,
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "url": "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
+      "score": 100,
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "url": "https://findcryptocpa.com/crypto-tax-cpa/texas/",
+      "score": 100,
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "url": "https://findcryptocpa.com/crypto-tax-cpa/washington/",
+      "score": 100,
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "url": "https://findcryptocpa.com/guides/defi-taxes/",
+      "score": 100,
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "url": "https://findcryptocpa.com/guides/irs-letter-6174/",
+      "score": 100,
+      "issues": [],
+      "warnings": []
+    },
+    {
       "url": "https://findcryptocpa.com/privacy/",
       "score": 95,
       "issues": [],
       "warnings": [
         "Content could be deeper (426 words)"
+      ]
+    },
+    {
+      "url": "https://findcryptocpa.com/specializations/audit-defense/",
+      "score": 100,
+      "issues": [],
+      "warnings": []
+    },
+    {
+      "url": "https://findcryptocpa.com/specializations/business/",
+      "score": 95,
+      "issues": [],
+      "warnings": [
+        "Content could be deeper (566 words)"
+      ]
+    },
+    {
+      "url": "https://findcryptocpa.com/specializations/defi/",
+      "score": 97,
+      "issues": [],
+      "warnings": [
+        "Title too long (68 chars)"
+      ]
+    },
+    {
+      "url": "https://findcryptocpa.com/specializations/individuals/",
+      "score": 95,
+      "issues": [],
+      "warnings": [
+        "Content could be deeper (549 words)"
+      ]
+    },
+    {
+      "url": "https://findcryptocpa.com/specializations/international/",
+      "score": 95,
+      "issues": [],
+      "warnings": [
+        "Content could be deeper (563 words)"
+      ]
+    },
+    {
+      "url": "https://findcryptocpa.com/specializations/mining-staking/",
+      "score": 95,
+      "issues": [],
+      "warnings": [
+        "Content could be deeper (528 words)"
+      ]
+    },
+    {
+      "url": "https://findcryptocpa.com/specializations/nft/",
+      "score": 95,
+      "issues": [],
+      "warnings": [
+        "Content could be deeper (488 words)"
+      ]
+    },
+    {
+      "url": "https://findcryptocpa.com/specializations/trading/",
+      "score": 95,
+      "issues": [],
+      "warnings": [
+        "Content could be deeper (564 words)"
       ]
     },
     {
@@ -52,122 +158,24 @@
       ]
     },
     {
-      "url": "https://findcryptocpa.com/specializations/defi/",
-      "score": 90,
-      "issues": [],
-      "warnings": [
-        "Missing FAQPage schema on a guide/specialization page",
-        "Content could be deeper (377 words)"
-      ]
-    },
-    {
-      "url": "https://findcryptocpa.com/specializations/nft/",
-      "score": 90,
-      "issues": [],
-      "warnings": [
-        "Missing FAQPage schema on a guide/specialization page",
-        "Content could be deeper (320 words)"
-      ]
-    },
-    {
-      "url": "https://findcryptocpa.com/specializations/mining-staking/",
-      "score": 90,
-      "issues": [],
-      "warnings": [
-        "Missing FAQPage schema on a guide/specialization page",
-        "Content could be deeper (375 words)"
-      ]
-    },
-    {
-      "url": "https://findcryptocpa.com/specializations/audit-defense/",
-      "score": 90,
-      "issues": [],
-      "warnings": [
-        "Missing FAQPage schema on a guide/specialization page",
-        "Content could be deeper (415 words)"
-      ]
-    },
-    {
-      "url": "https://findcryptocpa.com/specializations/business/",
-      "score": 90,
-      "issues": [],
-      "warnings": [
-        "Missing FAQPage schema on a guide/specialization page",
-        "Content could be deeper (392 words)"
-      ]
-    },
-    {
-      "url": "https://findcryptocpa.com/specializations/trading/",
-      "score": 90,
-      "issues": [],
-      "warnings": [
-        "Missing FAQPage schema on a guide/specialization page",
-        "Content could be deeper (406 words)"
-      ]
-    },
-    {
-      "url": "https://findcryptocpa.com/specializations/international/",
-      "score": 90,
-      "issues": [],
-      "warnings": [
-        "Missing FAQPage schema on a guide/specialization page",
-        "Content could be deeper (395 words)"
-      ]
-    },
-    {
-      "url": "https://findcryptocpa.com/specializations/individuals/",
-      "score": 90,
-      "issues": [],
-      "warnings": [
-        "Missing FAQPage schema on a guide/specialization page",
-        "Content could be deeper (381 words)"
-      ]
-    },
-    {
-      "url": "https://findcryptocpa.com/crypto-tax-cpa/california/",
-      "score": 80,
+      "url": "https://findcryptocpa.com/thank-you/",
+      "score": 68,
       "issues": [
-        "THIN CONTENT: Only 214 words"
+        "THIN CONTENT: Only 49 words"
       ],
-      "warnings": []
+      "warnings": [
+        "Title too short (25 chars)",
+        "Missing OG tags: og:title, og:description, og:image",
+        "No JSON-LD structured data found"
+      ]
     },
     {
-      "url": "https://findcryptocpa.com/crypto-tax-cpa/florida/",
-      "score": 80,
-      "issues": [
-        "THIN CONTENT: Only 214 words"
-      ],
-      "warnings": []
-    },
-    {
-      "url": "https://findcryptocpa.com/crypto-tax-cpa/illinois/",
-      "score": 100,
+      "url": "https://findcryptocpa.com/tool/",
+      "score": 95,
       "issues": [],
-      "warnings": []
-    },
-    {
-      "url": "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
-      "score": 80,
-      "issues": [
-        "THIN CONTENT: Only 227 words"
-      ],
-      "warnings": []
-    },
-    {
-      "url": "https://findcryptocpa.com/crypto-tax-cpa/texas/",
-      "score": 80,
-      "issues": [
-        "THIN CONTENT: Only 211 words"
-      ],
-      "warnings": []
-    },
-    {
-      "url": "https://findcryptocpa.com/crypto-tax-cpa/washington/",
-      "score": 80,
-      "issues": [
-        "THIN CONTENT: Only 215 words"
-      ],
-      "warnings": []
+      "warnings": [
+        "Content could be deeper (337 words)"
+      ]
     }
   ]
 }

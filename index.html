@@ -15,8 +15,35 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FwLYPCBN7B"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FwLYPCBN7B');</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FWLYPCBN7B"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FWLYPCBN7B');</script>
+
+<!-- NEW: JSON-LD Schema for Homepage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "FindCryptoCPA",
+      "url": "https://findcryptocpa.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://findcryptocpa.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "name": "FindCryptoCPA",
+      "url": "https://findcryptocpa.com/",
+      "logo": "https://findcryptocpa.com/og-image.png",
+      "sameAs": []
+    }
+  ]
+}
+</script>
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.6;color:#0f172a;background:#ffffff;-webkit-font-smoothing:antialiased}
@@ -73,6 +100,15 @@ footer a:hover{color:#fff}
 <h1>Find a Verified <span>Crypto Tax CPA</span></h1>
 <p>Connect with licensed professionals who understand DeFi, NFTs, IRS audits, and state-specific crypto tax laws.</p>
 <a href="/tool/" class="btn">Take the Free Complexity Quiz →</a>
+</div>
+</section>
+
+<!-- NEW: Added paragraph to fix thin content warning -->
+<section style="padding: 0 0 2rem 0;">
+<div class="container">
+<p style="text-align: center; color: #475569; max-width: 850px; margin: 0 auto; font-size: 1.1rem; line-height: 1.7;">
+Navigating the complexities of cryptocurrency taxation can be overwhelming. Whether you are an active DeFi trader, a long-term HODLer, a miner, or a business accepting crypto payments, the IRS requires accurate reporting of every transaction. Failing to properly track your cost basis or report income can lead to severe penalties and audits. Our curated directory connects you with licensed professionals who specialize in these exact scenarios, ensuring you have the expert guidance needed to navigate tax season successfully, minimize your liability, and avoid costly mistakes.
+</p>
 </div>
 </section>
 
@@ -159,6 +195,10 @@ footer a:hover{color:#fff}
 <a href="/specializations/nft/">NFTs</a>
 <a href="/specializations/mining-staking/">Mining & Staking</a>
 <a href="/specializations/audit-defense/">IRS Audit Defense</a>
+<a href="/specializations/business/">Business</a>
+<a href="/specializations/trading/">Active Trading</a>
+<a href="/specializations/international/">International</a>
+<a href="/specializations/individuals/">Individuals</a>
 </div>
 <div>
 <h4>Top States</h4>
