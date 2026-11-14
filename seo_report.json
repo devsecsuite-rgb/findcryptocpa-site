@@ -1,44 +1,41 @@
 {
   "site": "https://findcryptocpa.com",
-  "audited_at": "2026-11-14T14:18:18.147435Z",
+  "audited_at": "2026-11-14T14:54:08.956407Z",
   "pages_audited": 23,
-  "average_score": 96.5,
-  "critical_issues": 1,
-  "orphans": [
-    "https://findcryptocpa.com/thank-you/"
-  ],
+  "average_score": 96.8,
+  "critical_issues": 0,
+  "orphans": [],
   "broken_links": [],
   "results": [
     {
       "url": "https://findcryptocpa.com/",
-      "score": 93,
+      "score": 95,
       "issues": [],
       "warnings": [
-        "Heading hierarchy skipped H2 to H4",
         "Content could be deeper (338 words)"
       ],
       "links": [
-        "https://findcryptocpa.com/contact/",
-        "https://findcryptocpa.com/guides/defi-taxes/",
-        "https://findcryptocpa.com/specializations/trading/",
-        "https://findcryptocpa.com/tool/",
-        "https://findcryptocpa.com/specializations/audit-defense/",
-        "https://findcryptocpa.com/specializations/nft/",
-        "https://findcryptocpa.com/guides/irs-letter-6174/",
-        "https://findcryptocpa.com/specializations/international/",
-        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
-        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
-        "https://findcryptocpa.com/crypto-tax-cpa/california/",
         "https://findcryptocpa.com/specializations/mining-staking/",
-        "https://findcryptocpa.com/specializations/business/",
-        "https://findcryptocpa.com/crypto-tax-cpa/illinois/",
-        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
-        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
-        "https://findcryptocpa.com/specializations/individuals/",
-        "https://findcryptocpa.com/methodology/",
+        "https://findcryptocpa.com/guides/irs-letter-6174/",
         "https://findcryptocpa.com/",
+        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
+        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
+        "https://findcryptocpa.com/about/",
+        "https://findcryptocpa.com/methodology/",
+        "https://findcryptocpa.com/crypto-tax-cpa/california/",
+        "https://findcryptocpa.com/specializations/international/",
+        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
         "https://findcryptocpa.com/specializations/defi/",
-        "https://findcryptocpa.com/about/"
+        "https://findcryptocpa.com/specializations/nft/",
+        "https://findcryptocpa.com/specializations/audit-defense/",
+        "https://findcryptocpa.com/contact/",
+        "https://findcryptocpa.com/specializations/business/",
+        "https://findcryptocpa.com/tool/",
+        "https://findcryptocpa.com/crypto-tax-cpa/illinois/",
+        "https://findcryptocpa.com/specializations/trading/",
+        "https://findcryptocpa.com/guides/defi-taxes/",
+        "https://findcryptocpa.com/specializations/individuals/",
+        "https://findcryptocpa.com/crypto-tax-cpa/new-york/"
       ]
     },
     {
@@ -50,43 +47,42 @@
         "Content could be deeper (473 words)"
       ],
       "links": [
+        "https://findcryptocpa.com/about/",
         "https://findcryptocpa.com/contact/",
-        "https://findcryptocpa.com/privacy/",
-        "https://findcryptocpa.com/",
         "https://findcryptocpa.com/tool/",
+        "https://findcryptocpa.com/privacy/",
         "https://findcryptocpa.com/cdn-cgi/l/email-protection",
-        "https://findcryptocpa.com/terms/",
-        "https://findcryptocpa.com/about/"
+        "https://findcryptocpa.com/",
+        "https://findcryptocpa.com/terms/"
       ]
     },
     {
       "url": "https://findcryptocpa.com/contact/",
-      "score": 93,
+      "score": 95,
       "issues": [],
       "warnings": [
-        "Heading hierarchy skipped H2 to H4",
         "Content could be deeper (376 words)"
       ],
       "links": [
-        "https://findcryptocpa.com/contact/",
-        "https://findcryptocpa.com/specializations/trading/",
-        "https://findcryptocpa.com/tool/",
-        "https://findcryptocpa.com/specializations/audit-defense/",
-        "https://findcryptocpa.com/specializations/nft/",
-        "https://findcryptocpa.com/cdn-cgi/l/email-protection",
-        "https://findcryptocpa.com/specializations/international/",
-        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
-        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
-        "https://findcryptocpa.com/crypto-tax-cpa/california/",
         "https://findcryptocpa.com/specializations/mining-staking/",
-        "https://findcryptocpa.com/specializations/business/",
-        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
-        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
-        "https://findcryptocpa.com/specializations/individuals/",
-        "https://findcryptocpa.com/methodology/",
         "https://findcryptocpa.com/",
+        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
+        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
+        "https://findcryptocpa.com/about/",
+        "https://findcryptocpa.com/methodology/",
+        "https://findcryptocpa.com/crypto-tax-cpa/california/",
+        "https://findcryptocpa.com/specializations/international/",
+        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
+        "https://findcryptocpa.com/cdn-cgi/l/email-protection",
         "https://findcryptocpa.com/specializations/defi/",
-        "https://findcryptocpa.com/about/"
+        "https://findcryptocpa.com/specializations/nft/",
+        "https://findcryptocpa.com/specializations/audit-defense/",
+        "https://findcryptocpa.com/contact/",
+        "https://findcryptocpa.com/specializations/business/",
+        "https://findcryptocpa.com/tool/",
+        "https://findcryptocpa.com/specializations/trading/",
+        "https://findcryptocpa.com/specializations/individuals/",
+        "https://findcryptocpa.com/crypto-tax-cpa/new-york/"
       ]
     },
     {
@@ -95,18 +91,18 @@
       "issues": [],
       "warnings": [],
       "links": [
+        "https://findcryptocpa.com/about/",
         "https://findcryptocpa.com/contact/",
-        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
-        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
-        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
-        "https://findcryptocpa.com/privacy/",
-        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
-        "https://findcryptocpa.com/crypto-tax-cpa/california/",
         "https://findcryptocpa.com/methodology/",
-        "https://findcryptocpa.com/",
         "https://findcryptocpa.com/tool/",
+        "https://findcryptocpa.com/crypto-tax-cpa/california/",
+        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
+        "https://findcryptocpa.com/privacy/",
+        "https://findcryptocpa.com/",
         "https://findcryptocpa.com/terms/",
-        "https://findcryptocpa.com/about/"
+        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
+        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
+        "https://findcryptocpa.com/crypto-tax-cpa/texas/"
       ]
     },
     {
@@ -115,18 +111,18 @@
       "issues": [],
       "warnings": [],
       "links": [
+        "https://findcryptocpa.com/about/",
         "https://findcryptocpa.com/contact/",
-        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
-        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
-        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
-        "https://findcryptocpa.com/privacy/",
-        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
-        "https://findcryptocpa.com/crypto-tax-cpa/california/",
         "https://findcryptocpa.com/methodology/",
-        "https://findcryptocpa.com/",
         "https://findcryptocpa.com/tool/",
+        "https://findcryptocpa.com/crypto-tax-cpa/california/",
+        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
+        "https://findcryptocpa.com/privacy/",
+        "https://findcryptocpa.com/",
         "https://findcryptocpa.com/terms/",
-        "https://findcryptocpa.com/about/"
+        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
+        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
+        "https://findcryptocpa.com/crypto-tax-cpa/texas/"
       ]
     },
     {
@@ -135,18 +131,18 @@
       "issues": [],
       "warnings": [],
       "links": [
+        "https://findcryptocpa.com/about/",
         "https://findcryptocpa.com/contact/",
-        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
-        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
-        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
-        "https://findcryptocpa.com/privacy/",
-        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
-        "https://findcryptocpa.com/crypto-tax-cpa/california/",
         "https://findcryptocpa.com/methodology/",
-        "https://findcryptocpa.com/",
         "https://findcryptocpa.com/tool/",
+        "https://findcryptocpa.com/crypto-tax-cpa/california/",
+        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
+        "https://findcryptocpa.com/privacy/",
+        "https://findcryptocpa.com/",
         "https://findcryptocpa.com/terms/",
-        "https://findcryptocpa.com/about/"
+        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
+        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
+        "https://findcryptocpa.com/crypto-tax-cpa/texas/"
       ]
     },
     {
@@ -155,18 +151,18 @@
       "issues": [],
       "warnings": [],
       "links": [
+        "https://findcryptocpa.com/about/",
         "https://findcryptocpa.com/contact/",
-        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
-        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
-        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
-        "https://findcryptocpa.com/privacy/",
-        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
-        "https://findcryptocpa.com/crypto-tax-cpa/california/",
         "https://findcryptocpa.com/methodology/",
-        "https://findcryptocpa.com/",
         "https://findcryptocpa.com/tool/",
+        "https://findcryptocpa.com/crypto-tax-cpa/california/",
+        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
+        "https://findcryptocpa.com/privacy/",
+        "https://findcryptocpa.com/",
         "https://findcryptocpa.com/terms/",
-        "https://findcryptocpa.com/about/"
+        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
+        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
+        "https://findcryptocpa.com/crypto-tax-cpa/texas/"
       ]
     },
     {
@@ -175,18 +171,18 @@
       "issues": [],
       "warnings": [],
       "links": [
+        "https://findcryptocpa.com/about/",
         "https://findcryptocpa.com/contact/",
-        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
-        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
-        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
-        "https://findcryptocpa.com/privacy/",
-        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
-        "https://findcryptocpa.com/crypto-tax-cpa/california/",
         "https://findcryptocpa.com/methodology/",
-        "https://findcryptocpa.com/",
         "https://findcryptocpa.com/tool/",
+        "https://findcryptocpa.com/crypto-tax-cpa/california/",
+        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
+        "https://findcryptocpa.com/privacy/",
+        "https://findcryptocpa.com/",
         "https://findcryptocpa.com/terms/",
-        "https://findcryptocpa.com/about/"
+        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
+        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
+        "https://findcryptocpa.com/crypto-tax-cpa/texas/"
       ]
     },
     {
@@ -195,18 +191,18 @@
       "issues": [],
       "warnings": [],
       "links": [
+        "https://findcryptocpa.com/about/",
         "https://findcryptocpa.com/contact/",
-        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
-        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
-        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
-        "https://findcryptocpa.com/privacy/",
-        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
-        "https://findcryptocpa.com/crypto-tax-cpa/california/",
         "https://findcryptocpa.com/methodology/",
-        "https://findcryptocpa.com/",
         "https://findcryptocpa.com/tool/",
+        "https://findcryptocpa.com/crypto-tax-cpa/california/",
+        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
+        "https://findcryptocpa.com/privacy/",
+        "https://findcryptocpa.com/",
         "https://findcryptocpa.com/terms/",
-        "https://findcryptocpa.com/about/"
+        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
+        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
+        "https://findcryptocpa.com/crypto-tax-cpa/texas/"
       ]
     },
     {
@@ -215,42 +211,40 @@
       "issues": [],
       "warnings": [],
       "links": [
+        "https://findcryptocpa.com/about/",
         "https://findcryptocpa.com/contact/",
-        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
-        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
-        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
-        "https://findcryptocpa.com/privacy/",
-        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
-        "https://findcryptocpa.com/crypto-tax-cpa/california/",
         "https://findcryptocpa.com/methodology/",
-        "https://findcryptocpa.com/",
-        "https://findcryptocpa.com/specializations/defi/",
         "https://findcryptocpa.com/tool/",
+        "https://findcryptocpa.com/crypto-tax-cpa/california/",
+        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
+        "https://findcryptocpa.com/privacy/",
+        "https://findcryptocpa.com/specializations/defi/",
+        "https://findcryptocpa.com/",
         "https://findcryptocpa.com/terms/",
-        "https://findcryptocpa.com/about/"
+        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
+        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
+        "https://findcryptocpa.com/crypto-tax-cpa/texas/"
       ]
     },
     {
       "url": "https://findcryptocpa.com/guides/irs-letter-6174/",
-      "score": 98,
+      "score": 100,
       "issues": [],
-      "warnings": [
-        "Heading hierarchy skipped H2 to H4"
-      ],
+      "warnings": [],
       "links": [
+        "https://findcryptocpa.com/about/",
         "https://findcryptocpa.com/contact/",
-        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
-        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
-        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
-        "https://findcryptocpa.com/privacy/",
-        "https://findcryptocpa.com/specializations/audit-defense/",
-        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
-        "https://findcryptocpa.com/crypto-tax-cpa/california/",
         "https://findcryptocpa.com/methodology/",
-        "https://findcryptocpa.com/",
         "https://findcryptocpa.com/tool/",
+        "https://findcryptocpa.com/crypto-tax-cpa/california/",
+        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
+        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
+        "https://findcryptocpa.com/privacy/",
+        "https://findcryptocpa.com/",
         "https://findcryptocpa.com/terms/",
-        "https://findcryptocpa.com/about/"
+        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
+        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
+        "https://findcryptocpa.com/specializations/audit-defense/"
       ]
     },
     {
@@ -262,13 +256,13 @@
         "Content could be deeper (426 words)"
       ],
       "links": [
+        "https://findcryptocpa.com/about/",
         "https://findcryptocpa.com/contact/",
         "https://findcryptocpa.com/privacy/",
-        "https://findcryptocpa.com/",
         "https://findcryptocpa.com/cdn-cgi/l/email-protection",
-        "https://findcryptocpa.com",
+        "https://findcryptocpa.com/",
         "https://findcryptocpa.com/terms/",
-        "https://findcryptocpa.com/about/"
+        "https://findcryptocpa.com"
       ]
     },
     {
@@ -277,25 +271,25 @@
       "issues": [],
       "warnings": [],
       "links": [
-        "https://findcryptocpa.com/contact/",
-        "https://findcryptocpa.com/specializations/trading/",
-        "https://findcryptocpa.com/tool/",
-        "https://findcryptocpa.com/specializations/audit-defense/",
-        "https://findcryptocpa.com/specializations/nft/",
-        "https://findcryptocpa.com/guides/irs-letter-6174/",
-        "https://findcryptocpa.com/specializations/international/",
-        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
-        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
-        "https://findcryptocpa.com/crypto-tax-cpa/california/",
         "https://findcryptocpa.com/specializations/mining-staking/",
-        "https://findcryptocpa.com/specializations/business/",
-        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
-        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
-        "https://findcryptocpa.com/specializations/individuals/",
-        "https://findcryptocpa.com/methodology/",
+        "https://findcryptocpa.com/guides/irs-letter-6174/",
         "https://findcryptocpa.com/",
+        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
+        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
+        "https://findcryptocpa.com/about/",
+        "https://findcryptocpa.com/methodology/",
+        "https://findcryptocpa.com/crypto-tax-cpa/california/",
+        "https://findcryptocpa.com/specializations/international/",
+        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
         "https://findcryptocpa.com/specializations/defi/",
-        "https://findcryptocpa.com/about/"
+        "https://findcryptocpa.com/specializations/nft/",
+        "https://findcryptocpa.com/specializations/audit-defense/",
+        "https://findcryptocpa.com/contact/",
+        "https://findcryptocpa.com/specializations/business/",
+        "https://findcryptocpa.com/tool/",
+        "https://findcryptocpa.com/specializations/trading/",
+        "https://findcryptocpa.com/specializations/individuals/",
+        "https://findcryptocpa.com/crypto-tax-cpa/new-york/"
       ]
     },
     {
@@ -306,24 +300,24 @@
         "Content could be deeper (566 words)"
       ],
       "links": [
+        "https://findcryptocpa.com/about/",
         "https://findcryptocpa.com/contact/",
-        "https://findcryptocpa.com/specializations/international/",
-        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
-        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
-        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
-        "https://findcryptocpa.com/specializations/audit-defense/",
-        "https://findcryptocpa.com/specializations/individuals/",
-        "https://findcryptocpa.com/specializations/trading/",
         "https://findcryptocpa.com/methodology/",
-        "https://findcryptocpa.com/crypto-tax-cpa/california/",
-        "https://findcryptocpa.com/",
-        "https://findcryptocpa.com/specializations/nft/",
-        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
-        "https://findcryptocpa.com/specializations/defi/",
-        "https://findcryptocpa.com/tool/",
         "https://findcryptocpa.com/specializations/mining-staking/",
         "https://findcryptocpa.com/specializations/business/",
-        "https://findcryptocpa.com/about/"
+        "https://findcryptocpa.com/tool/",
+        "https://findcryptocpa.com/crypto-tax-cpa/california/",
+        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
+        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
+        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
+        "https://findcryptocpa.com/specializations/international/",
+        "https://findcryptocpa.com/specializations/defi/",
+        "https://findcryptocpa.com/specializations/trading/",
+        "https://findcryptocpa.com/",
+        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
+        "https://findcryptocpa.com/specializations/individuals/",
+        "https://findcryptocpa.com/specializations/nft/",
+        "https://findcryptocpa.com/specializations/audit-defense/"
       ]
     },
     {
@@ -332,25 +326,25 @@
       "issues": [],
       "warnings": [],
       "links": [
-        "https://findcryptocpa.com/contact/",
-        "https://findcryptocpa.com/guides/defi-taxes/",
-        "https://findcryptocpa.com/specializations/trading/",
-        "https://findcryptocpa.com/tool/",
-        "https://findcryptocpa.com/specializations/audit-defense/",
-        "https://findcryptocpa.com/specializations/nft/",
-        "https://findcryptocpa.com/specializations/international/",
-        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
-        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
-        "https://findcryptocpa.com/crypto-tax-cpa/california/",
         "https://findcryptocpa.com/specializations/mining-staking/",
-        "https://findcryptocpa.com/specializations/business/",
-        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
-        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
-        "https://findcryptocpa.com/specializations/individuals/",
-        "https://findcryptocpa.com/methodology/",
         "https://findcryptocpa.com/",
+        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
+        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
+        "https://findcryptocpa.com/about/",
+        "https://findcryptocpa.com/methodology/",
+        "https://findcryptocpa.com/crypto-tax-cpa/california/",
+        "https://findcryptocpa.com/specializations/international/",
+        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
         "https://findcryptocpa.com/specializations/defi/",
-        "https://findcryptocpa.com/about/"
+        "https://findcryptocpa.com/specializations/nft/",
+        "https://findcryptocpa.com/specializations/audit-defense/",
+        "https://findcryptocpa.com/contact/",
+        "https://findcryptocpa.com/specializations/business/",
+        "https://findcryptocpa.com/tool/",
+        "https://findcryptocpa.com/specializations/trading/",
+        "https://findcryptocpa.com/guides/defi-taxes/",
+        "https://findcryptocpa.com/specializations/individuals/",
+        "https://findcryptocpa.com/crypto-tax-cpa/new-york/"
       ]
     },
     {
@@ -361,24 +355,24 @@
         "Content could be deeper (549 words)"
       ],
       "links": [
+        "https://findcryptocpa.com/about/",
         "https://findcryptocpa.com/contact/",
-        "https://findcryptocpa.com/specializations/international/",
-        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
-        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
-        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
-        "https://findcryptocpa.com/specializations/audit-defense/",
-        "https://findcryptocpa.com/specializations/individuals/",
-        "https://findcryptocpa.com/specializations/trading/",
         "https://findcryptocpa.com/methodology/",
-        "https://findcryptocpa.com/crypto-tax-cpa/california/",
-        "https://findcryptocpa.com/",
-        "https://findcryptocpa.com/specializations/nft/",
-        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
-        "https://findcryptocpa.com/specializations/defi/",
-        "https://findcryptocpa.com/tool/",
         "https://findcryptocpa.com/specializations/mining-staking/",
         "https://findcryptocpa.com/specializations/business/",
-        "https://findcryptocpa.com/about/"
+        "https://findcryptocpa.com/tool/",
+        "https://findcryptocpa.com/crypto-tax-cpa/california/",
+        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
+        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
+        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
+        "https://findcryptocpa.com/specializations/international/",
+        "https://findcryptocpa.com/specializations/defi/",
+        "https://findcryptocpa.com/specializations/trading/",
+        "https://findcryptocpa.com/",
+        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
+        "https://findcryptocpa.com/specializations/individuals/",
+        "https://findcryptocpa.com/specializations/nft/",
+        "https://findcryptocpa.com/specializations/audit-defense/"
       ]
     },
     {
@@ -389,24 +383,24 @@
         "Content could be deeper (563 words)"
       ],
       "links": [
+        "https://findcryptocpa.com/about/",
         "https://findcryptocpa.com/contact/",
-        "https://findcryptocpa.com/specializations/international/",
-        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
-        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
-        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
-        "https://findcryptocpa.com/specializations/audit-defense/",
-        "https://findcryptocpa.com/specializations/individuals/",
-        "https://findcryptocpa.com/specializations/trading/",
         "https://findcryptocpa.com/methodology/",
-        "https://findcryptocpa.com/crypto-tax-cpa/california/",
-        "https://findcryptocpa.com/",
-        "https://findcryptocpa.com/specializations/nft/",
-        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
-        "https://findcryptocpa.com/specializations/defi/",
-        "https://findcryptocpa.com/tool/",
         "https://findcryptocpa.com/specializations/mining-staking/",
         "https://findcryptocpa.com/specializations/business/",
-        "https://findcryptocpa.com/about/"
+        "https://findcryptocpa.com/tool/",
+        "https://findcryptocpa.com/crypto-tax-cpa/california/",
+        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
+        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
+        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
+        "https://findcryptocpa.com/specializations/international/",
+        "https://findcryptocpa.com/specializations/defi/",
+        "https://findcryptocpa.com/specializations/trading/",
+        "https://findcryptocpa.com/",
+        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
+        "https://findcryptocpa.com/specializations/individuals/",
+        "https://findcryptocpa.com/specializations/nft/",
+        "https://findcryptocpa.com/specializations/audit-defense/"
       ]
     },
     {
@@ -417,24 +411,24 @@
         "Content could be deeper (528 words)"
       ],
       "links": [
+        "https://findcryptocpa.com/about/",
         "https://findcryptocpa.com/contact/",
-        "https://findcryptocpa.com/specializations/international/",
-        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
-        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
-        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
-        "https://findcryptocpa.com/specializations/audit-defense/",
-        "https://findcryptocpa.com/specializations/individuals/",
-        "https://findcryptocpa.com/specializations/trading/",
         "https://findcryptocpa.com/methodology/",
-        "https://findcryptocpa.com/crypto-tax-cpa/california/",
-        "https://findcryptocpa.com/",
-        "https://findcryptocpa.com/specializations/nft/",
-        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
-        "https://findcryptocpa.com/specializations/defi/",
-        "https://findcryptocpa.com/tool/",
         "https://findcryptocpa.com/specializations/mining-staking/",
         "https://findcryptocpa.com/specializations/business/",
-        "https://findcryptocpa.com/about/"
+        "https://findcryptocpa.com/tool/",
+        "https://findcryptocpa.com/crypto-tax-cpa/california/",
+        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
+        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
+        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
+        "https://findcryptocpa.com/specializations/international/",
+        "https://findcryptocpa.com/specializations/defi/",
+        "https://findcryptocpa.com/specializations/trading/",
+        "https://findcryptocpa.com/",
+        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
+        "https://findcryptocpa.com/specializations/individuals/",
+        "https://findcryptocpa.com/specializations/nft/",
+        "https://findcryptocpa.com/specializations/audit-defense/"
       ]
     },
     {
@@ -445,20 +439,20 @@
         "Content could be deeper (488 words)"
       ],
       "links": [
+        "https://findcryptocpa.com/about/",
         "https://findcryptocpa.com/contact/",
-        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
-        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
-        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
-        "https://findcryptocpa.com/specializations/audit-defense/",
-        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
-        "https://findcryptocpa.com/crypto-tax-cpa/california/",
         "https://findcryptocpa.com/methodology/",
-        "https://findcryptocpa.com/",
-        "https://findcryptocpa.com/specializations/nft/",
-        "https://findcryptocpa.com/specializations/defi/",
-        "https://findcryptocpa.com/tool/",
         "https://findcryptocpa.com/specializations/mining-staking/",
-        "https://findcryptocpa.com/about/"
+        "https://findcryptocpa.com/tool/",
+        "https://findcryptocpa.com/crypto-tax-cpa/california/",
+        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
+        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
+        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
+        "https://findcryptocpa.com/specializations/defi/",
+        "https://findcryptocpa.com/",
+        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
+        "https://findcryptocpa.com/specializations/nft/",
+        "https://findcryptocpa.com/specializations/audit-defense/"
       ]
     },
     {
@@ -469,24 +463,24 @@
         "Content could be deeper (564 words)"
       ],
       "links": [
+        "https://findcryptocpa.com/about/",
         "https://findcryptocpa.com/contact/",
-        "https://findcryptocpa.com/specializations/international/",
-        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
-        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
-        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
-        "https://findcryptocpa.com/specializations/audit-defense/",
-        "https://findcryptocpa.com/specializations/individuals/",
-        "https://findcryptocpa.com/specializations/trading/",
         "https://findcryptocpa.com/methodology/",
-        "https://findcryptocpa.com/crypto-tax-cpa/california/",
-        "https://findcryptocpa.com/",
-        "https://findcryptocpa.com/specializations/nft/",
-        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
-        "https://findcryptocpa.com/specializations/defi/",
-        "https://findcryptocpa.com/tool/",
         "https://findcryptocpa.com/specializations/mining-staking/",
         "https://findcryptocpa.com/specializations/business/",
-        "https://findcryptocpa.com/about/"
+        "https://findcryptocpa.com/tool/",
+        "https://findcryptocpa.com/crypto-tax-cpa/california/",
+        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
+        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
+        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
+        "https://findcryptocpa.com/specializations/international/",
+        "https://findcryptocpa.com/specializations/defi/",
+        "https://findcryptocpa.com/specializations/trading/",
+        "https://findcryptocpa.com/",
+        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
+        "https://findcryptocpa.com/specializations/individuals/",
+        "https://findcryptocpa.com/specializations/nft/",
+        "https://findcryptocpa.com/specializations/audit-defense/"
       ]
     },
     {
@@ -498,43 +492,42 @@
         "Content could be deeper (500 words)"
       ],
       "links": [
+        "https://findcryptocpa.com/about/",
         "https://findcryptocpa.com/contact/",
         "https://findcryptocpa.com/privacy/",
-        "https://findcryptocpa.com/",
         "https://findcryptocpa.com/cdn-cgi/l/email-protection",
-        "https://findcryptocpa.com/terms/",
-        "https://findcryptocpa.com/about/"
+        "https://findcryptocpa.com/",
+        "https://findcryptocpa.com/terms/"
       ]
     },
     {
       "url": "https://findcryptocpa.com/thank-you/",
-      "score": 93,
+      "score": 95,
       "issues": [],
       "warnings": [
-        "Heading hierarchy skipped H2 to H4",
         "Content could be deeper (332 words)"
       ],
       "links": [
-        "https://findcryptocpa.com/contact/",
-        "https://findcryptocpa.com/guides/defi-taxes/",
-        "https://findcryptocpa.com/specializations/trading/",
-        "https://findcryptocpa.com/tool/",
-        "https://findcryptocpa.com/specializations/audit-defense/",
-        "https://findcryptocpa.com/specializations/nft/",
-        "https://findcryptocpa.com/guides/irs-letter-6174/",
-        "https://findcryptocpa.com/specializations/international/",
-        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
-        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
-        "https://findcryptocpa.com/crypto-tax-cpa/california/",
         "https://findcryptocpa.com/specializations/mining-staking/",
-        "https://findcryptocpa.com/specializations/business/",
-        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
-        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
-        "https://findcryptocpa.com/specializations/individuals/",
-        "https://findcryptocpa.com/methodology/",
+        "https://findcryptocpa.com/guides/irs-letter-6174/",
         "https://findcryptocpa.com/",
+        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
+        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
+        "https://findcryptocpa.com/about/",
+        "https://findcryptocpa.com/methodology/",
+        "https://findcryptocpa.com/crypto-tax-cpa/california/",
+        "https://findcryptocpa.com/specializations/international/",
+        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
         "https://findcryptocpa.com/specializations/defi/",
-        "https://findcryptocpa.com/about/"
+        "https://findcryptocpa.com/specializations/nft/",
+        "https://findcryptocpa.com/specializations/audit-defense/",
+        "https://findcryptocpa.com/contact/",
+        "https://findcryptocpa.com/specializations/business/",
+        "https://findcryptocpa.com/tool/",
+        "https://findcryptocpa.com/specializations/trading/",
+        "https://findcryptocpa.com/guides/defi-taxes/",
+        "https://findcryptocpa.com/specializations/individuals/",
+        "https://findcryptocpa.com/crypto-tax-cpa/new-york/"
       ]
     },
     {
@@ -546,11 +539,11 @@
         "Content could be deeper (337 words)"
       ],
       "links": [
+        "https://findcryptocpa.com/about/",
         "https://findcryptocpa.com/contact/",
         "https://findcryptocpa.com/privacy/",
-        "https://findcryptocpa.com/",
         "https://findcryptocpa.com/terms/",
-        "https://findcryptocpa.com/about/"
+        "https://findcryptocpa.com/"
       ]
     }
   ]
