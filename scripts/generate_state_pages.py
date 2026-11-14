@@ -8,11 +8,9 @@ TEMPLATE = ROOT / "templates" / "state-template.html"
 OUT = ROOT / "crypto-tax-cpa"
 HOMEPAGE = ROOT / "index.html"
 
-
 def load_csv(path):
     with open(path, newline='', encoding='utf-8') as f:
         return list(csv.DictReader(f))
-
 
 def build_cpa_card(c):
     initials = c.get('initials') or ''.join([w[0] for w in c['name'].split()[:2]]).upper()
@@ -33,7 +31,6 @@ def build_cpa_card(c):
 </div>
 </div>'''
 
-
 def build_cpa_section(cpas, state_name):
     if cpas:
         cards = '\n'.join(build_cpa_card(c) for c in cpas)
@@ -52,26 +49,68 @@ def build_cpa_section(cpas, state_name):
 <a href="/contact/" class="btn">Submit Your Firm →</a>
 </div>'''
 
-
-def build_cpa_list_json(cpas):
-    items = []
-    for i, c in enumerate(cpas, 1):
-        items.append({"@type": "ListItem", "position": i, "name": c['firm'] or c['name']})
-    return json.dumps(items, separators=(',', ':'), ensure_ascii=False)
-
-
-def build_faq(faqs):
+def build_faq_html(faqs):
     if not faqs:
         return '<p style="color:#64748b">FAQs coming soon.</p>'
-    return '\n'.join(f'<h3>{f["question"]}</h3>\n<p>{f["answer"]}</p>' for f in faqs)
+    html = ""
+    for f in faqs:
+        # Using standard h2/h3 for better SEO structure
+        html += f'<div class="faq-item">\n<h3>{f["question"]}</h3>\n<p>{f["answer"]}</p>\n</div>\n'
+    return html
 
+def build_faq_schema(faqs):
+    """Generates Google-approved FAQ Schema for AI Search Extractability"""
+    if not faqs:
+        return ""
+    schema_items = []
+    for f in faqs:
+        schema_items.append({
+            "@type": "Question",
+            "name": f["question"],
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": f["answer"]
+            }
+        })
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": schema_items
+    }
+    return f'<script type="application/ld+json">\n{json.dumps(schema, indent=2, ensure_ascii=False)}\n</script>'
+
+def build_cpa_schema(cpas, state_name):
+    """Generates ItemList Schema so Google knows this is a directory"""
+    if not cpas:
+        return ""
+    items = []
+    for i, c in enumerate(cpas, 1):
+        items.append({
+            "@type": "ListItem",
+            "position": i,
+            "item": {
+                "@type": "AccountingService",
+                "name": c['firm'] or c['name'],
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": c.get('location', ''),
+                    "addressRegion": state_name
+                }
+            }
+        })
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": f"Crypto Tax CPAs in {state_name}",
+        "itemListElement": items
+    }
+    return f'<script type="application/ld+json">\n{json.dumps(schema, indent=2, ensure_ascii=False)}\n</script>'
 
 def build_criteria(criteria_str):
     if not criteria_str:
         return '<li>Federal crypto tax expertise</li><li>Experience with state tax authority</li>'
     items = [c.strip() for c in criteria_str.split('|') if c.strip()]
     return '\n'.join(f'<li>{i}</li>' for i in items)
-
 
 def update_homepage_state_links(states):
     if not HOMEPAGE.exists():
@@ -101,7 +140,6 @@ def update_homepage_state_links(states):
     HOMEPAGE.write_text(new_content, encoding='utf-8')
     print(f"Updated homepage with {len(sorted_states)} state links")
 
-
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--force', action='store_true', help='Overwrite existing state pages')
@@ -121,25 +159,31 @@ def main():
             print(f"SKIP {slug} (exists, use --force to overwrite)")
             continue
 
+        state_name = s['state_name'].strip()
         state_cpas = [c for c in cpas if c['state_slug'].strip() == slug]
         state_faqs = [f for f in faqs if f['state_slug'].strip() == slug]
 
+        # New Tax Notes field - falls back gracefully if column is missing in CSV
+        tax_notes = s.get('tax_notes', 'Crypto is treated as property for federal tax purposes, but always consult a local CPA for state-specific rules.')
+
         replacements = {
-            '{{STATE_NAME}}': s['state_name'].strip(),
+            '{{STATE_NAME}}': state_name,
             '{{STATE_SLUG}}': slug,
-            '{{TOP_CITY_1}}': s['top_city_1'].strip(),
-            '{{TOP_CITY_2}}': s['top_city_2'].strip(),
-            '{{TOP_CITY_3}}': s['top_city_3'].strip(),
+            '{{TOP_CITY_1}}': s.get('top_city_1', '').strip(),
+            '{{TOP_CITY_2}}': s.get('top_city_2', '').strip(),
+            '{{TOP_CITY_3}}': s.get('top_city_3', '').strip(),
             '{{CPA_COUNT}}': str(len(state_cpas)),
-            '{{CPA_LIST_JSON}}': build_cpa_list_json(state_cpas),
-            '{{CPA_SECTION}}': build_cpa_section(state_cpas, s['state_name'].strip()),
-            '{{STATE_TAX_RATE}}': s['state_tax_rate'].strip(),
-            '{{CRYPTO_HOLDERS}}': s['crypto_holders'].strip(),
-            '{{CPA_FEE_RANGE}}': s['cpa_fee_range'].strip(),
-            '{{STATE_TAX_AUTHORITY}}': s['state_tax_authority'].strip(),
-            '{{AUDIT_RATE_NOTE}}': s['audit_rate_note'].strip(),
+            '{{CPA_SECTION}}': build_cpa_section(state_cpas, state_name),
+            '{{STATE_TAX_RATE}}': s.get('state_tax_rate', 'Varies').strip(),
+            '{{CRYPTO_HOLDERS}}': s.get('crypto_holders', 'Millions').strip(),
+            '{{CPA_FEE_RANGE}}': s.get('cpa_fee_range', '$500 - $2,000').strip(),
+            '{{STATE_TAX_AUTHORITY}}': s.get('state_tax_authority', 'State Tax Authority').strip(),
+            '{{AUDIT_RATE_NOTE}}': s.get('audit_rate_note', '').strip(),
             '{{STATE_CPA_CRITERIA}}': build_criteria(s.get('state_cpa_criteria', '')),
-            '{{STATE_FAQ}}': build_faq(state_faqs),
+            '{{STATE_TAX_NOTES}}': tax_notes,
+            '{{STATE_FAQ}}': build_faq_html(state_faqs),
+            '{{FAQ_SCHEMA}}': build_faq_schema(state_faqs),
+            '{{CPA_SCHEMA}}': build_cpa_schema(state_cpas, state_name)
         }
 
         html = template
@@ -151,7 +195,6 @@ def main():
         print(f"WROTE {out_file}")
 
     update_homepage_state_links(states)
-
 
 if __name__ == '__main__':
     main()
