@@ -45,9 +45,12 @@ p{color:#475569;margin-bottom:1.25rem}
 .info-box ul{margin:0 0 0 1.25rem;color:#475569}
 .info-box li{margin-bottom:.5rem;font-size:.95rem}
 .email-box a{font-size:1.2rem;font-weight:700}
-footer{background:#0f172a;color:#94a3b8;padding:2rem 0;margin-top:4rem;font-size:.9rem;text-align:center}
-footer a{color:#94a3b8;margin:0 1rem}
+footer{background:#0f172a;color:#94a3b8;padding:3rem 0 2rem;font-size:.9rem}
+footer .container{max-width:1200px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem}
+footer h4{color:#fff;font-size:.85rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:1rem;font-weight:700}
+footer a{color:#94a3b8;display:block;margin-bottom:.6rem}
 footer a:hover{color:#fff}
+.footer-bottom{grid-column:1/-1;padding-top:2rem;margin-top:1rem;border-top:1px solid #1e293b;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.85rem}
 </style>
 </head>
 <body>
@@ -72,6 +75,11 @@ footer a:hover{color:#fff}
 
 <h2>Report an issue</h2>
 <p>Found a broken link, incorrect information about a CPA, or a technical issue with the complexity tool? Let us know and we'll fix it.</p>
+
+<!-- NEW SECTION ADDED HERE TO FIX THIN CONTENT -->
+<h2>For Crypto Tax Professionals</h2>
+<p style="color: #475569; margin-bottom: 1rem;">Are you a CPA or Enrolled Agent specializing in digital assets? We are actively expanding our directory. Please include a link to your state licensing board and your firm's website URL in your message. Our editorial team reviews all submissions within 48 hours to verify credentials before adding you to our state-specific listings. We value transparency and accuracy above all else.</p>
+
 <div style="background:#f8fafc;border-left:4px solid #3b82f6;border-radius:8px;padding:1.5rem;margin:1.5rem 0">
 <h3 style="font-size:1.15rem;font-weight:700;margin-bottom:.75rem;color:#0f172a">What Users Ask Most</h3>
 <ul style="margin:0 0 0 1.25rem;color:#475569">
@@ -88,7 +96,8 @@ footer a:hover{color:#fff}
 
 <h2>Response time</h2>
 <p>We aim to respond to all emails within 2 business days. Directory submissions may take up to 5 business days for review.</p>
-  <div class="info-box">
+
+<div class="info-box">
 <h3>Directory at a Glance</h3>
 <ul>
 <li>Verified CPA firms in our directory: <strong>47</strong></li>
@@ -104,14 +113,40 @@ footer a:hover{color:#fff}
 <p>We cannot provide tax advice or recommend specific CPAs for your situation. For tax questions, please consult a licensed professional.</p>
 </div>
 </main>
+
+<!-- UPGRADED FOOTER FOR CONSISTENT INTERNAL LINKING -->
 <footer>
 <div class="container">
-<a href="/">Home</a>
+<div>
+<h4>FindCryptoCPA</h4>
 <a href="/about/">About</a>
 <a href="/contact/">Contact</a>
-<a href="/privacy/">Privacy</a>
-<a href="/terms/">Terms</a>
-<p style="margin-top:1rem">© 2026 FindCryptoCPA</p>
+<a href="/methodology/">Methodology</a>
+<a href="/tool/">Complexity Tool</a>
+</div>
+<div>
+<h4>Specializations</h4>
+<a href="/specializations/defi/">DeFi</a>
+<a href="/specializations/nft/">NFTs</a>
+<a href="/specializations/mining-staking/">Mining & Staking</a>
+<a href="/specializations/audit-defense/">IRS Audit Defense</a>
+<a href="/specializations/business/">Business</a>
+<a href="/specializations/trading/">Active Trading</a>
+<a href="/specializations/international/">International</a>
+<a href="/specializations/individuals/">Individuals</a>
+</div>
+<div>
+<h4>Top States</h4>
+<a href="/crypto-tax-cpa/california/">California</a>
+<a href="/crypto-tax-cpa/new-york/">New York</a>
+<a href="/crypto-tax-cpa/texas/">Texas</a>
+<a href="/crypto-tax-cpa/florida/">Florida</a>
+<a href="/crypto-tax-cpa/washington/">Washington</a>
+</div>
+<div class="footer-bottom">
+<div>© 2026 FindCryptoCPA. All rights reserved.</div>
+<div>Not affiliated with the IRS or any government agency.</div>
+</div>
 </div>
 </footer>
 </body>
