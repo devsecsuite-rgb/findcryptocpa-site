@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Methodology & Editorial Policy - FindCryptoCPA</title>
+<meta name="description" content="Learn how FindCryptoCPA verifies crypto tax professionals, how our directory ranks CPAs, and our commitment to editorial independence and transparency.">
+<link rel="canonical" href="https://findcryptocpa.com/methodology/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://findcryptocpa.com/methodology/">
+<meta property="og:title" content="Our Methodology & Editorial Policy">
+<meta property="og:description" content="How we verify CPAs and maintain trust in the crypto tax industry.">
+<meta property="og:image" content="https://findcryptocpa.com/og-image.png">
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FwLYPCBN7B"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FwLYPCBN7B');</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.6;color:#0f172a;background:#ffffff;-webkit-font-smoothing:antialiased}
+a{color:#3b82f6;text-decoration:none}
+a:hover{color:#2563eb}
+header{background:#ffffff;border-bottom:1px solid #e2e8f0;padding:1rem 0}
+.container{max-width:800px;margin:0 auto;padding:0 1.5rem}
+header .container{max-width:1200px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.25rem;font-weight:800;color:#0f172a;letter-spacing:-.02em}
+.logo span{color:#3b82f6}
+nav{display:flex;gap:1.5rem}
+nav a{color:#64748b;font-weight:500;font-size:.95rem}
+nav a:hover{color:#0f172a}
+.hero{padding:4rem 0 2rem;text-align:center;background:linear-gradient(180deg,#ffffff 0%,#f8fafc 100%)}
+.hero h1{font-size:2.5rem;letter-spacing:-.03em;font-weight:800;margin-bottom:1rem;color:#0f172a}
+.hero p{font-size:1.15rem;color:#64748b;max-width:600px;margin:0 auto}
+.content{padding:3rem 0;font-size:1.1rem;color:#334155}
+.content h2{font-size:1.6rem;font-weight:800;color:#0f172a;margin:2.5rem 0 1rem;letter-spacing:-.02em}
+.content p{margin-bottom:1.5rem}
+.content ul{margin:0 0 1.5rem 1.5rem}
+.content li{margin-bottom:.5rem}
+.content strong{color:#0f172a}
+.info-box{background:#f8fafc;border-left:4px solid #3b82f6;border-radius:0 8px 8px 0;padding:1.5rem;margin:2rem 0}
+.info-box p{color:#475569;margin-bottom:0}
+
+footer{background:#0f172a;color:#94a3b8;padding:3rem 0 2rem;font-size:.9rem;margin-top:4rem}
+footer .container{max-width:1200px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem}
+footer h4{color:#fff;font-size:.85rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:1rem;font-weight:700}
+footer a{color:#94a3b8;display:block;margin-bottom:.6rem}
+footer a:hover{color:#fff}
+.footer-bottom{grid-column:1/-1;padding-top:2rem;margin-top:1rem;border-top:1px solid #1e293b;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.85rem}
+@media(max-width:768px){.hero h1{font-size:2rem}nav{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container">
+<a href="/" class="logo">Find<span>Crypto</span>CPA</a>
+<nav>
+<a href="/">Directory</a>
+<a href="/tool/">Complexity Tool</a>
+<a href="/about/">About</a>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+<h1>Our Methodology & Editorial Policy</h1>
+<p>How we verify professionals, how we rank our directory, and our commitment to transparency.</p>
+</div>
+</section>
+
+<section class="content">
+<div class="container">
+
+<p>At FindCryptoCPA, our goal is to connect individuals and businesses with highly qualified, verified tax professionals who specialize in cryptocurrency. Because tax and financial advice carry significant consequences, we hold ourselves to strict standards of accuracy, transparency, and editorial independence.</p>
+
+<h2>1. How We Verify CPAs and Tax Professionals</h2>
+<p>We do not automatically accept every firm that submits to our directory. To be listed on FindCryptoCPA, a professional must pass our verification process:</p>
+<ul>
+<li><strong>License Verification:</strong> We check state licensing boards to ensure the professional is an active, licensed CPA, Enrolled Agent (EA), or tax attorney in good standing.</li>
+<li><strong>Crypto Expertise:</strong> We review the firm's website, service offerings, and public statements to confirm they specifically handle digital assets (e.g., DeFi, NFTs, staking, cost basis reconstruction, and IRS audit defense).</li>
+<li><strong>Client Reviews:</strong> Where available, we review public testimonials and third-party reviews to ensure the firm has a positive track record.</li>
+</ul>
+
+<h2>2. How Our Directory Rankings Work</h2>
+<p>We believe in providing honest recommendations. Our directory is structured as follows:</p>
+<ul>
+<li><strong>Organic Listings (Free):</strong> These are professionals we have verified and listed for free. They are sorted by state, specialization, and other relevant factors to help you find the best fit.</li>
+<li><strong>Featured Listings (Paid):</strong> Firms may pay a fee to be highlighted at the top of a category or state page. However, <strong>compensation never affects our verification standards</strong>. A firm cannot buy a "Verified" badge.</li>
+<li><strong>Editorial Independence:</strong> Our guides and articles are written independently. We do not accept payment in exchange for positive reviews or biased rankings.</li>
+</ul>
+
+<h2>3. How We Make Money (Affiliate Disclosure)</h2>
+<p>FindCryptoCPA is free for users. To keep the site running and continue expanding our directory, we participate in affiliate programs.</p>
+<ul>
+<li><strong>Software Affiliates:</strong> We may earn a commission if you click on a link to a crypto tax software (like Koinly or CoinLedger) and make a purchase. We only recommend software we believe is genuinely useful.</li>
+<li><strong>Featured Directory Placements:</strong> As mentioned above, CPA firms can pay for increased visibility in our directory.</li>
+</ul>
+<p>This revenue model allows us to keep the directory free while maintaining high verification standards. If you have questions about our affiliate relationships, please contact us.</p>
+
+<h2>4. Content Accuracy and Review</h2>
+<p>Tax laws change frequently, especially regarding cryptocurrency. Our editorial team is committed to the following:</p>
+<ul>
+<li><strong>Up-to-Date Information:</strong> We regularly review our state-specific tax guides and IRS notice guides (such as our guide to <a href="/guides/irs-letter-6174/">IRS Letter 6174</a>) to ensure they reflect the latest guidance from the IRS and state tax authorities.</li>
+<li><strong>Professional Review:</strong> We are actively building a review board of licensed CPAs to fact-check our tax content. Until then, all content should be considered educational and not a substitute for professional tax advice.</li>
+<li><strong>Corrections Policy:</strong> If you spot an error in one of our guides, please <a href="/contact/">contact us</a>. We investigate all claims and will update the page with a "Correction" note if necessary.</li>
+</ul>
+
+<div class="info-box">
+<p><strong>Disclaimer:</strong> FindCryptoCPA is a directory and educational resource. We are not a CPA firm, law firm, or financial advisor. Nothing on this website constitutes official tax, legal, or financial advice. Always consult with a licensed professional before making decisions regarding your taxes.</p>
+</div>
+
+</div>
+</section>
+
+<footer>
+<div class="container">
+<div>
+<h4>FindCryptoCPA</h4>
+<a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+<a href="/methodology/">Methodology</a>
+<a href="/tool/">Complexity Tool</a>
+</div>
+<div>
+<h4>Top States</h4>
+<a href="/crypto-tax-cpa/california/">California</a>
+<a href="/crypto-tax-cpa/new-york/">New York</a>
+<a href="/crypto-tax-cpa/texas/">Texas</a>
+<a href="/crypto-tax-cpa/florida/">Florida</a>
+<a href="/crypto-tax-cpa/washington/">Washington</a>
+</div>
+<div>
+<h4>Legal</h4>
+<a href="/privacy/">Privacy Policy</a>
+<a href="/terms/">Terms of Service</a>
+</div>
+<div class="footer-bottom">
+<div>© 2026 FindCryptoCPA. All rights reserved.</div>
+<div>Not affiliated with the IRS or any government agency.</div>
+</div>
+</div>
+</footer>
+
+</body>
+</html>
