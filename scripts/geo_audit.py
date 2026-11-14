@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-"""
-Zero-cost GEO (Generative Engine Optimization) audit.
-Checks AI crawler access, llms.txt, schema, and citability.
-"""
 import os
 import re
 import json
@@ -28,12 +24,10 @@ AI_CRAWLERS = [
 
 UA = "Mozilla/5.0 (compatible; GEOAuditBot/1.0)"
 
-
 def fetch(url):
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     with urllib.request.urlopen(req, timeout=30) as resp:
         return resp.status, resp.read().decode("utf-8", errors="replace")
-
 
 def get_sitemap_urls():
     try:
@@ -44,7 +38,6 @@ def get_sitemap_urls():
     except Exception as e:
         print(f"Sitemap failed: {e}")
         return []
-
 
 def check_robots():
     print("\n=== AI CRAWLER ACCESS ===")
@@ -65,7 +58,6 @@ def check_robots():
 
     return {"blocked": blocked}
 
-
 def check_llms_txt():
     print("\n=== LLMS.TXT ===")
     try:
@@ -76,11 +68,10 @@ def check_llms_txt():
             return {"found": True, "lines": len(lines)}
     except Exception:
         pass
-    print("  Missing")
+    print("  Missing (CRITICAL for AI Search)")
     return {"found": False}
 
-
-def check_schema(soup):
+def check_schema(soup, url):
     print("\n=== SCHEMA ===")
     schemas = []
     for script in soup.find_all("script", attrs={"type": "application/ld+json"}):
@@ -94,9 +85,15 @@ def check_schema(soup):
                     schemas.append(data.get("@type", "Unknown"))
         except Exception:
             pass
+    
     print(f"  Schema types found: {', '.join(schemas) if schemas else 'None'}")
+    
+    # GEO Specific Check
+    if "/guides/" in url or "/specializations/" in url:
+        if "FAQPage" not in schemas:
+            print("  WARNING: Guide/Specialization missing FAQPage schema for AI extraction")
+    
     return schemas
-
 
 def check_citability(soup):
     print("\n=== CITABILITY ===")
@@ -115,22 +112,18 @@ def check_citability(soup):
 
     text = main.get_text()
     stats = len(re.findall(r"\$[\d,]+|\d+%|\d+\.\d+|\d+ (?:billion|million|thousand)", text))
-    if stats < 5:
-        notes.append(f"Only {stats} statistics found")
+    if stats < 3:
+        notes.append(f"Only {stats} statistics found (AI engines prefer data)")
         score -= 10
     else:
         notes.append(f"{stats} statistics found")
 
     lists = main.find_all(["ul", "ol"])
-    if len(lists) < 2:
-        notes.append(f"Only {len(lists)} lists")
+    if len(lists) < 1:
+        notes.append(f"Only {len(lists)} lists (AI engines prefer bullet points)")
         score -= 5
     else:
         notes.append(f"{len(lists)} lists found")
-
-    tables = main.find_all("table")
-    if len(tables) >= 1:
-        notes.append(f"{len(tables)} data table(s) found")
 
     headings = main.find_all(["h2", "h3"])
     question_headings = [h for h in headings if "?" in h.get_text() or h.get_text().strip().lower().startswith(("how", "what", "why", "when", "where"))]
@@ -142,7 +135,6 @@ def check_citability(soup):
         print(f"    - {note}")
 
     return {"score": max(0, score), "notes": notes}
-
 
 def audit_page(url):
     print(f"\n{'=' * 60}")
@@ -156,7 +148,7 @@ def audit_page(url):
         return {"url": url, "error": str(e)}
 
     soup = BeautifulSoup(html, "html.parser")
-    schemas = check_schema(soup)
+    schemas = check_schema(soup, url)
     citability = check_citability(soup)
 
     return {
@@ -165,7 +157,6 @@ def audit_page(url):
         "citability_score": citability["score"],
         "citability_notes": citability["notes"],
     }
-
 
 def main():
     print(f"\n{'#' * 60}")
@@ -211,7 +202,6 @@ def main():
         json.dump(report, f, indent=2)
 
     print(f"\nReport saved to {REPORT_FILE}")
-
 
 if __name__ == "__main__":
     main()
