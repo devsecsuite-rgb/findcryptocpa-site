@@ -1,18 +1,16 @@
 {
   "site": "https://findcryptocpa.com",
-  "audited_at": "2026-11-14T13:56:17.309685Z",
+  "audited_at": "2026-11-14T14:05:52.943911Z",
   "pages_audited": 23,
-  "average_score": 94.3,
-  "critical_issues": 3,
+  "average_score": 96.5,
+  "critical_issues": 1,
   "results": [
     {
       "url": "https://findcryptocpa.com/",
-      "score": 75,
-      "issues": [
-        "THIN CONTENT: Only 248 words"
-      ],
+      "score": 95,
+      "issues": [],
       "warnings": [
-        "No JSON-LD structured data found"
+        "Content could be deeper (338 words)"
       ]
     },
     {
@@ -25,11 +23,11 @@
     },
     {
       "url": "https://findcryptocpa.com/contact/",
-      "score": 80,
-      "issues": [
-        "THIN CONTENT: Only 276 words"
-      ],
-      "warnings": []
+      "score": 95,
+      "issues": [],
+      "warnings": [
+        "Content could be deeper (376 words)"
+      ]
     },
     {
       "url": "https://findcryptocpa.com/crypto-tax-cpa/california/",
@@ -103,11 +101,9 @@
     },
     {
       "url": "https://findcryptocpa.com/specializations/defi/",
-      "score": 97,
+      "score": 100,
       "issues": [],
-      "warnings": [
-        "Title too long (68 chars)"
-      ]
+      "warnings": []
     },
     {
       "url": "https://findcryptocpa.com/specializations/individuals/",
@@ -159,15 +155,11 @@
     },
     {
       "url": "https://findcryptocpa.com/thank-you/",
-      "score": 68,
+      "score": 80,
       "issues": [
-        "THIN CONTENT: Only 49 words"
+        "THIN CONTENT: Only 216 words"
       ],
-      "warnings": [
-        "Title too short (25 chars)",
-        "Missing OG tags: og:title, og:description, og:image",
-        "No JSON-LD structured data found"
-      ]
+      "warnings": []
     },
     {
       "url": "https://findcryptocpa.com/tool/",
