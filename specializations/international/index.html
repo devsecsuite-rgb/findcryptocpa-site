@@ -21,9 +21,46 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWLYPCBN7B"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FWLYPCBN7B');</script>
+
+<!-- CPA ItemList Schema -->
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ItemList","name":"International Crypto Tax CPAs","url":"https://findcryptocpa.com/specializations/international/","numberOfItems":5,"itemListElement":[{"@type":"ListItem","position":1,"name":"Online Taxman"},{"@type":"ListItem","position":2,"name":"Sheppard Morris CPAs"},{"@type":"ListItem","position":3,"name":"Lorenzo CPA"},{"@type":"ListItem","position":4,"name":"Clarity Tax and CPAs"},{"@type":"ListItem","position":5,"name":"CryptAcce"}]}
 </script>
+
+<!-- FAQ Schema for GEO / AI Extractability -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need to report my crypto on an FBAR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, potentially. If you hold cryptocurrency in a foreign exchange account (like Binance or Kraken outside the US) and the aggregate value of all your foreign financial accounts exceeds $10,000 at any point in the year, you must file an FBAR (FinCEN Form 114)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are US expats taxed on cryptocurrency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "US citizens and green card holders are taxed on their worldwide income, regardless of where they live. This means you must report crypto gains and income to the IRS even if you live abroad. However, you may be eligible for the Foreign Tax Credit or Foreign Earned Income Exclusion to avoid double taxation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is FATCA and how does it apply to crypto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FATCA (Foreign Account Tax Compliance Act) requires US taxpayers to report foreign financial assets using Form 8938. If your foreign crypto accounts are held through a foreign financial institution, they may be subject to FATCA reporting, which has different (and often higher) thresholds than the FBAR."
+      }
+    }
+  ]
+}
+</script>
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.6;color:#0f172a;background:#ffffff;-webkit-font-smoothing:antialiased}
@@ -172,14 +209,14 @@ footer a:hover{color:#fff}
 </div>
 
 <div class="info-box">
-  <h3>Active Trading Tax: Key Statistics</h3>
+  <h3>International Crypto Tax: Key Statistics</h3>
 <ul>
-<li>Average trades per active US crypto trader: <strong>500+ per year</strong></li>
-<li>Wash sale rule applies to crypto: <strong>yes</strong> (as of 2025)</li>
-<li>Short-term capital gains tax rate: <strong>up to 37%</strong></li>
-<li>Long-term capital gains tax rate: <strong>0%, 15%, or 20%</strong></li>
-<li>Average trading tax bill for active traders: <strong>$8,000 to $40,000</strong></li>
-<li>Cost basis methods supported: <strong>4 methods</strong> — FIFO, LIFO, HIFO, Specific ID</li>
+<li>US citizens living abroad must report worldwide income: <strong>Yes</strong></li>
+<li>FBAR aggregate threshold for foreign accounts: <strong>$10,000</strong></li>
+<li>Maximum penalty for willful FBAR violations: <strong>$100,000+ or 50% of account</strong></li>
+<li>FATCA reporting threshold for single expats: <strong>$200,000 (year-end)</strong></li>
+<li>Countries with active US tax treaties: <strong>65+</strong></li>
+<li>Average cost to fix missed FBAR years: <strong>$3,000–$15,000</strong></li>
 </ul>
 
 <h3>International crypto tax is its own specialty</h3>
@@ -197,6 +234,20 @@ footer a:hover{color:#fff}
 </ul>
 </div>
 
+<!-- NEW: Expanded FAQ Section -->
+<div class="info-box" style="margin-top: 3rem; border-left-color: #ec4899; background: #fdf2f8;">
+<h3 style="color: #be185d; font-size: 1.3rem; margin-bottom: 1rem;">Frequently Asked Questions: International Crypto Taxes</h3>
+
+<h4 style="margin-top:1.5rem; font-size:1.15rem; color:#831843;">Do I need to report my crypto on an FBAR?</h4>
+<p style="color:#9d174d; margin-bottom:0;">Yes, potentially. If you hold cryptocurrency in a foreign exchange account (like Binance or Kraken outside the US) and the aggregate value of all your foreign financial accounts exceeds $10,000 at any point in the year, you must file an FBAR (FinCEN Form 114).</p>
+
+<h4 style="margin-top:1.5rem; font-size:1.15rem; color:#831843;">How are US expats taxed on cryptocurrency?</h4>
+<p style="color:#9d174d; margin-bottom:0;">US citizens and green card holders are taxed on their worldwide income, regardless of where they live. This means you must report crypto gains and income to the IRS even if you live abroad. However, you may be eligible for the Foreign Tax Credit or Foreign Earned Income Exclusion to avoid double taxation.</p>
+
+<h4 style="margin-top:1.5rem; font-size:1.15rem; color:#831843;">What is FATCA and how does it apply to crypto?</h4>
+<p style="color:#9d174d; margin-bottom:0;">FATCA (Foreign Account Tax Compliance Act) requires US taxpayers to report foreign financial assets using Form 8938. If your foreign crypto accounts are held through a foreign financial institution, they may be subject to FATCA reporting, which has different (and often higher) thresholds than the FBAR.</p>
+</div>
+
 <div class="cta-banner">
 <h3>Cross-border crypto?</h3>
 <p>Take our free 60-second quiz. FBAR and FATCA penalties are severe — a specialist CPA is essential.</p>
@@ -211,6 +262,7 @@ footer a:hover{color:#fff}
 <h4>FindCryptoCPA</h4>
 <a href="/about/">About</a>
 <a href="/contact/">Contact</a>
+<a href="/methodology/">Methodology</a>
 <a href="/tool/">Complexity Tool</a>
 </div>
 <div>
