@@ -1,6 +1,6 @@
 {
   "site": "https://findcryptocpa.com",
-  "audited_at": "2026-11-14T22:04:49Z",
+  "audited_at": "2026-11-14T22:10:43Z",
   "robots": {
     "blocked": []
   },
@@ -8,7 +8,7 @@
     "found": true,
     "lines": 14
   },
-  "avg_citability": 82.82608695652173,
+  "avg_citability": 84.56521739130434,
   "pages": [
     {
       "url": "https://findcryptocpa.com/",
@@ -159,12 +159,12 @@
         "Article",
         "FAQPage"
       ],
-      "direct_answers": 8,
+      "direct_answers": 9,
       "citability_score": 80,
       "citability_notes": [
         "1 data table(s) found (Great for AI)",
-        "Only 0 statistics found (AI engines prefer data)",
-        "Only 0 lists (AI engines prefer bullet points)",
+        "Only 1 statistics found (AI engines prefer data)",
+        "Only 1 lists (AI engines prefer bullet points)",
         "No authoritative (.gov/.edu) outbound links found"
       ]
     },
@@ -186,120 +186,128 @@
       "url": "https://findcryptocpa.com/specializations/audit-defense/",
       "schemas": [
         "ItemList",
-        "FAQPage"
+        "FAQPage",
+        "Article"
       ],
       "direct_answers": 8,
-      "citability_score": 85,
+      "citability_score": 90,
       "citability_notes": [
         "No data tables found (AI prefers structured data)",
         "10 statistics found",
         "2 lists found",
-        "No authoritative (.gov/.edu) outbound links found"
+        "1 authoritative outbound links (.gov/.edu) found"
       ]
     },
     {
       "url": "https://findcryptocpa.com/specializations/business/",
       "schemas": [
         "ItemList",
-        "FAQPage"
+        "FAQPage",
+        "Article"
       ],
       "direct_answers": 3,
-      "citability_score": 85,
+      "citability_score": 90,
       "citability_notes": [
         "No data tables found (AI prefers structured data)",
         "5 statistics found",
         "3 lists found",
-        "No authoritative (.gov/.edu) outbound links found"
+        "1 authoritative outbound links (.gov/.edu) found"
       ]
     },
     {
       "url": "https://findcryptocpa.com/specializations/defi/",
       "schemas": [
         "ItemList",
-        "FAQPage"
+        "FAQPage",
+        "Article"
       ],
       "direct_answers": 8,
-      "citability_score": 80,
+      "citability_score": 85,
       "citability_notes": [
         "No data tables found (AI prefers structured data)",
         "6 statistics found",
         "Only 1 lists (AI engines prefer bullet points)",
-        "No authoritative (.gov/.edu) outbound links found"
+        "1 authoritative outbound links (.gov/.edu) found"
       ]
     },
     {
       "url": "https://findcryptocpa.com/specializations/individuals/",
       "schemas": [
         "ItemList",
-        "FAQPage"
+        "FAQPage",
+        "Article"
       ],
       "direct_answers": 3,
-      "citability_score": 85,
+      "citability_score": 90,
       "citability_notes": [
         "No data tables found (AI prefers structured data)",
         "12 statistics found",
         "3 lists found",
-        "No authoritative (.gov/.edu) outbound links found"
+        "1 authoritative outbound links (.gov/.edu) found"
       ]
     },
     {
       "url": "https://findcryptocpa.com/specializations/international/",
       "schemas": [
         "ItemList",
-        "FAQPage"
+        "FAQPage",
+        "Article"
       ],
       "direct_answers": 3,
-      "citability_score": 85,
+      "citability_score": 90,
       "citability_notes": [
         "No data tables found (AI prefers structured data)",
         "10 statistics found",
         "3 lists found",
-        "No authoritative (.gov/.edu) outbound links found"
+        "1 authoritative outbound links (.gov/.edu) found"
       ]
     },
     {
       "url": "https://findcryptocpa.com/specializations/mining-staking/",
       "schemas": [
         "ItemList",
-        "FAQPage"
+        "FAQPage",
+        "Article"
       ],
       "direct_answers": 3,
-      "citability_score": 85,
+      "citability_score": 90,
       "citability_notes": [
         "No data tables found (AI prefers structured data)",
         "6 statistics found",
         "3 lists found",
-        "No authoritative (.gov/.edu) outbound links found"
+        "1 authoritative outbound links (.gov/.edu) found"
       ]
     },
     {
       "url": "https://findcryptocpa.com/specializations/nft/",
       "schemas": [
         "ItemList",
-        "FAQPage"
+        "FAQPage",
+        "Article"
       ],
       "direct_answers": 3,
-      "citability_score": 85,
+      "citability_score": 90,
       "citability_notes": [
         "No data tables found (AI prefers structured data)",
         "8 statistics found",
         "2 lists found",
-        "No authoritative (.gov/.edu) outbound links found"
+        "1 authoritative outbound links (.gov/.edu) found"
       ]
     },
     {
       "url": "https://findcryptocpa.com/specializations/trading/",
       "schemas": [
         "ItemList",
-        "FAQPage"
+        "FAQPage",
+        "Article"
       ],
       "direct_answers": 3,
-      "citability_score": 85,
+      "citability_score": 90,
       "citability_notes": [
         "No data tables found (AI prefers structured data)",
         "11 statistics found",
         "3 lists found",
-        "No authoritative (.gov/.edu) outbound links found"
+        "1 authoritative outbound links (.gov/.edu) found"
       ]
     },
     {
