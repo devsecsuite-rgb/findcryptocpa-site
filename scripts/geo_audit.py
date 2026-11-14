@@ -22,7 +22,7 @@ AI_CRAWLERS = [
     "Google-Extended", "anthropic-ai", "CCBot", "Bytespider", "Amazonbot",
 ]
 
-UA = "Mozilla/5.0 (compatible; GEOAuditBot/1.0)"
+UA = "Mozilla/5.0 (compatible; GEOAuditBot/2.0)"
 
 def fetch(url):
     req = urllib.request.Request(url, headers={"User-Agent": UA})
@@ -72,31 +72,62 @@ def check_llms_txt():
     return {"found": False}
 
 def check_schema(soup, url):
-    print("\n=== SCHEMA ===")
+    print("\n=== SCHEMA VALIDATION ===")
     schemas = []
+    faq_valid = False
+    has_article = False
+    
     for script in soup.find_all("script", attrs={"type": "application/ld+json"}):
         try:
             data = json.loads(script.string)
             if isinstance(data, dict):
                 if "@graph" in data:
                     for node in data["@graph"]:
-                        schemas.append(node.get("@type", "Unknown"))
+                        schema_type = node.get("@type", "Unknown")
+                        schemas.append(schema_type)
+                        if schema_type == "FAQPage" and "mainEntity" in node:
+                            faq_valid = True
+                        if schema_type in ["Article", "BlogPosting", "NewsArticle"]:
+                            has_article = True
                 else:
-                    schemas.append(data.get("@type", "Unknown"))
+                    schema_type = data.get("@type", "Unknown")
+                    schemas.append(schema_type)
+                    if schema_type == "FAQPage" and "mainEntity" in data:
+                        faq_valid = True
+                    if schema_type in ["Article", "BlogPosting", "NewsArticle"]:
+                        has_article = True
         except Exception:
             pass
     
     print(f"  Schema types found: {', '.join(schemas) if schemas else 'None'}")
     
-    # GEO Specific Check
     if "/guides/" in url or "/specializations/" in url:
-        if "FAQPage" not in schemas:
-            print("  WARNING: Guide/Specialization missing FAQPage schema for AI extraction")
+        if not faq_valid:
+            print("  WARNING: Missing valid FAQPage schema (AI extraction risk)")
+        if not has_article:
+            print("  WARNING: Missing Article schema (AI citation risk)")
     
     return schemas
 
+def check_direct_answers(soup):
+    """AI engines prefer short, direct answers immediately following a heading."""
+    print("\n=== DIRECT ANSWER FORMAT ===")
+    direct_answers = 0
+    headings = soup.find_all(["h2", "h3"])
+    
+    for h in headings:
+        # Get the immediate next sibling paragraph
+        next_node = h.find_next_sibling()
+        if next_node and next_node.name == "p":
+            word_count = len(next_node.get_text().split())
+            if word_count < 50:  # Sweet spot for AI snippets
+                direct_answers += 1
+                
+    print(f"  Found {direct_answers} headings with short direct answers (<50 words).")
+    return direct_answers
+
 def check_citability(soup):
-    print("\n=== CITABILITY ===")
+    print("\n=== CITABILITY & DATA ===")
     main = soup.find("main") or soup.find("article") or soup.body
     if not main:
         return {"score": 0, "notes": ["No main content found"]}
@@ -104,31 +135,39 @@ def check_citability(soup):
     notes = []
     score = 100
 
-    paragraphs = main.find_all("p")
-    long_paragraphs = [p for p in paragraphs if len(p.get_text().split()) > 150]
-    if long_paragraphs:
-        notes.append(f"{len(long_paragraphs)} paragraphs over 150 words")
-        score -= min(20, len(long_paragraphs) * 5)
+    # 1. Tables (AI loves tables)
+    tables = main.find_all("table")
+    if len(tables) >= 1:
+        notes.append(f"{len(tables)} data table(s) found (Great for AI)")
+    else:
+        notes.append("No data tables found (AI prefers structured data)")
+        score -= 10
 
+    # 2. Statistics
     text = main.get_text()
     stats = len(re.findall(r"\$[\d,]+|\d+%|\d+\.\d+|\d+ (?:billion|million|thousand)", text))
-    if stats < 3:
+    if stats < 5:
         notes.append(f"Only {stats} statistics found (AI engines prefer data)")
         score -= 10
     else:
         notes.append(f"{stats} statistics found")
 
+    # 3. Lists
     lists = main.find_all(["ul", "ol"])
-    if len(lists) < 1:
+    if len(lists) < 2:
         notes.append(f"Only {len(lists)} lists (AI engines prefer bullet points)")
         score -= 5
     else:
         notes.append(f"{len(lists)} lists found")
 
-    headings = main.find_all(["h2", "h3"])
-    question_headings = [h for h in headings if "?" in h.get_text() or h.get_text().strip().lower().startswith(("how", "what", "why", "when", "where"))]
-    if question_headings:
-        notes.append(f"{len(question_headings)} question-based headings")
+    # 4. Outbound Citations (.gov / .edu)
+    outbound_links = main.find_all("a", href=True)
+    authoritative_links = [a['href'] for a in outbound_links if '.gov' in a['href'] or '.edu' in a['href']]
+    if len(authoritative_links) > 0:
+        notes.append(f"{len(authoritative_links)} authoritative outbound links (.gov/.edu) found")
+    else:
+        notes.append("No authoritative (.gov/.edu) outbound links found")
+        score -= 5
 
     print(f"  Citability score: {max(0, score)}/100")
     for note in notes:
@@ -149,18 +188,20 @@ def audit_page(url):
 
     soup = BeautifulSoup(html, "html.parser")
     schemas = check_schema(soup, url)
+    direct_answers = check_direct_answers(soup)
     citability = check_citability(soup)
 
     return {
         "url": url,
         "schemas": schemas,
+        "direct_answers": direct_answers,
         "citability_score": citability["score"],
         "citability_notes": citability["notes"],
     }
 
 def main():
     print(f"\n{'#' * 60}")
-    print(f"# GEO AUDIT: {SITE_URL}")
+    print(f"# GEO AUDIT v2.0: {SITE_URL}")
     print(f"# {time.strftime('%Y-%m-%d %H:%M')}")
     print(f"{'#' * 60}")
 
