@@ -1,71 +1,48 @@
 #!/usr/bin/env python3
-import re
+import os
 from pathlib import Path
-from datetime import datetime, timezone
+from datetime import date
 
 ROOT = Path(__file__).resolve().parent.parent
-SITEMAP = ROOT / "sitemap.xml"
-BASE = "https://findcryptocpa.com"
+DOMAIN = "https://findcryptocpa.com"
+TODAY = date.today().isoformat()
 
-# Static pages — add new ones here if you create them
-STATIC_URLS = [
-    "/",
-    "/tool/",
-    "/about/",
-    "/contact/",
-    "/privacy/",
-    "/terms/",
-    "/specializations/defi/",
-    "/specializations/nft/",
-    "/specializations/mining-staking/",
-    "/specializations/audit-defense/",
-    "/specializations/business/",
-    "/specializations/trading/",
-    "/specializations/international/",
-    "/specializations/individuals/",
-]
-
-# Pages we do NOT want in the sitemap
-EXCLUDE_SLUGS = {"thank-you"}
-
-
-def build_sitemap():
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-
+def generate_sitemap():
     urls = []
+    
+    # 1. Add Homepage
+    urls.append(f"{DOMAIN}/")
+    
+    # 2. Find all index.html files in the root and subdirectories
+    exclude_dirs = {'scripts', 'data', 'templates', '.git', '.github'}
+    
+    for root, dirs, files in os.walk(ROOT):
+        dirs[:] = [d for d in dirs if d not in exclude_dirs]
+        if 'index.html' in files:
+            rel_path = Path(root).relative_to(ROOT)
+            if str(rel_path) == '.':
+                continue # Skip root, already added
+            
+            # Clean up the URL path (e.g., /about/index.html -> /about/)
+            url_path = f"/{rel_path.as_posix()}/"
+            urls.append(f"{DOMAIN}{url_path}")
 
-    # Static pages
-    for path in STATIC_URLS:
-        urls.append(f"{BASE}{path}")
-
-    # State pages — auto-discovered
-    state_dir = ROOT / "crypto-tax-cpa"
-    if state_dir.exists():
-        for p in sorted(state_dir.glob("*/index.html")):
-            slug = p.parent.name
-            if slug in EXCLUDE_SLUGS:
-                continue
-            urls.append(f"{BASE}/crypto-tax-cpa/{slug}/")
-
-    # Build XML
-    lines = ['<?xml version="1.0" encoding="UTF-8"?>']
-    lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
-    for u in urls:
-        lines.append(f"  <url>")
-        lines.append(f"    <loc>{u}</loc>")
-        lines.append(f"    <lastmod>{today}</lastmod>")
-        lines.append(f"  </url>")
-    lines.append("</urlset>")
-    lines.append("")
-
-    return "\n".join(lines), len(urls)
-
-
-def main():
-    content, count = build_sitemap()
-    SITEMAP.write_text(content, encoding="utf-8")
-    print(f"Rebuilt sitemap.xml with {count} URLs")
-
+    # 3. Build the XML
+    xml_lines = ['<?xml version="1.0" encoding="UTF-8"?>']
+    xml_lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
+    
+    for url in sorted(set(urls)):
+        xml_lines.append("  <url>")
+        xml_lines.append(f"    <loc>{url}</loc>")
+        xml_lines.append(f"    <lastmod>{TODAY}</lastmod>")
+        xml_lines.append("  </url>")
+        
+    xml_lines.append('</urlset>')
+    
+    # 4. Write to sitemap.xml
+    sitemap_path = ROOT / "sitemap.xml"
+    sitemap_path.write_text("\n".join(xml_lines), encoding="utf-8")
+    print(f"✅ Sitemap generated with {len(urls)} URLs at {sitemap_path}")
 
 if __name__ == "__main__":
-    main()
+    generate_sitemap()
