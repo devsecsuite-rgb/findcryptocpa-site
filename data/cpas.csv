@@ -1,3 +1,24 @@
-state_slug,initials,name,firm,location,tags,price
-illinois,GT,Garrett Taylor,Count on Sheep,"Chicago, IL",DeFi|NFTs|Staking,Contact for quote
-illinois,TC,Taxing Cryptocurrency,Taxing Cryptocurrency,"Chicago, IL",DeFi|Tax Planning,Contact for quote
+state_slug,initials,name,firm,location,tags,price,email
+illinois,GT,Garrett Taylor,Count on Sheep,"Chicago, IL",DeFi|NFTs|Staking,Contact for quote,contact@countonsheep.com
+illinois,TC,Taxing Cryptocurrency,Taxing Cryptocurrency,"Chicago, IL",DeFi|Tax Planning,Contact for quote,admin@taxingcryptocurrency.com
+california,DT,Dimov Tax Team,Dimov Tax,"San Jose, CA",Crypto Taxation|RSU|Stock Options,Contact for quote,info@dimovtax.com
+california,JT,Joffe Tax Advisors,Joffe Tax Advisors,"Los Angeles, CA",Crypto|IRS Representation,Contact for quote,joffetax@joffetax.net
+california,AG,Alex G.,Alex G. CPA,"California",Bitcoin|Crypto Traders|Miners,Contact for quote,info@cpa-ag.com
+california,NS,Nicholas Sanchez,Miller Kaplan,"San Francisco, CA",Blockchain/Cryptocurrency,Contact for quote,nsanchez@millerkaplan.com
+florida,FA,FAS CPA Team,FAS CPA & Consultants,"Miami, FL",Crypto|Real Estate|Hedge Funds,Contact for quote,support@fascpaconsultants.com
+florida,DM,Daniel Martinez,BizCPAs,"Florida",Crypto Tax,Contact for quote,dmartinez@bizcpas.net
+florida,AP,Andrew Perlin,SSJG CPA,"Miami, FL",Crypto Accounting|Tax,Contact for quote,Andrew@ssjgcpa.com
+florida,FP,Fred Passelli,Passelli Accounting Services,"Florida",Crypto Tax,Contact for quote,Fredpasselli.cpa@gmail.com
+new-york,CC,Commerce CPA Team,Commerce CPA LLC,"New York, NY",Crypto Investors|Entrepreneurs,Contact for quote,vickb@commercecpa.com
+new-york,LG,Lisa Goldman,Sax LLP,"New York, NY",International Tax|Crypto,Contact for quote,lgoldman@saxllp.com
+new-york,WL,Winnie Lee,ATX Solution,"New York, NY",Crypto Taxation|Retirement Planning,Contact for quote,customer@atxsolution.com
+new-york,KS,Kurt Simmons,KAS CPAs,"New York, NY",Crypto|Trader & Investment Tax,Contact for quote,kurtsimmons@kascpas.com
+new-york,GD,George Dimov,Dimov Tax,"New York, NY",Crypto Accounting|International Tax,Contact for quote,george@dimovtax.com
+texas,JT,Jason Tyra,Tyra CPA,"Texas",Bitcoin Tax|Accounting,Contact for quote,jason@tyracpa.com
+texas,MR,Matthew J Roberts,Meadows Collier,"Texas",Cryptocurrency|Digital Assets,Contact for quote,mlroberts@meadowscollier.com
+texas,DH,Derek Hartsfield,Derek Hartsfield CPA,"Denton, TX",Crypto Accounting,Contact for quote,Hello@DerekHartsfield.com
+washington,AW,Accelerate Wealth Team,Accelerate Wealth CPAs,"Seattle, WA",Crypto Tax|Accounting,Contact for quote,info@acceleratewealthcpas.com
+washington,CT,Clarity Tax Team,Clarity Tax & CPA's,"Bellingham, WA",Crypto Tax|Estate Planning,Contact for quote,info@claritytaxgroup.com
+washington,NW,Northwest Accounting Team,Northwest Accounting Group,"Shelton, WA",Crypto|1099,Contact for quote,nw@nwaccountinggroup.com
+washington,BB,Bugaboo Team,Bugaboo Bookkeeping,"Washington",Crypto Tax Solutions,Contact for quote,info@bugaboobookkeeping.com
+washington,WN,Whitmore & Knox Team,Whitmore & Knox,"Seattle, WA",Accounting,Contact for quote,Contact@Whitmoreknox.com
