@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -215,16 +214,23 @@ footer a:hover{color:#fff}
 </div>
 </div>
 </main>
+
+<!-- UPDATED FOOTER -->
 <footer>
-<div class="container">
+<div class="container" style="display:flex; justify-content:center; flex-wrap:wrap; gap:1rem;">
 <a href="/">Home</a>
 <a href="/about/">About</a>
 <a href="/contact/">Contact</a>
+<a href="/methodology/">Methodology</a>
+<a href="/specializations/defi/">DeFi</a>
+<a href="/specializations/audit-defense/">Audit Defense</a>
 <a href="/privacy/">Privacy</a>
 <a href="/terms/">Terms</a>
-<p style="margin-top:1rem">© 2026 FindCryptoCPA</p>
+<p style="margin-top:1rem; width:100%;">© 2026 FindCryptoCPA</p>
 </div>
 </footer>
+
+<!-- UPDATED SCRIPT WITH AFFILIATE LINKS -->
 <script>
 const answers = new Array(10).fill(null);
 let currentQ = 0;
@@ -275,34 +281,52 @@ function showResult() {
   num.textContent = total;
   box.className = 'score-box';
   
+  // ⚠️ REPLACE THESE URLS WITH YOUR ACTUAL AFFILIATE LINKS FROM YOUR DASHBOARD
+  const koinlyLink = "https://koinly.io/?via=6AD55A5A&utm_source=affiliate"; 
+  const cointrackerLink = "https://coinledger.io?fpr=tool";
+
   if (total <= 8) {
     box.classList.add('simple');
     label.textContent = 'Simple';
     desc.textContent = 'Your crypto activity is straightforward. You likely do not need a CPA.';
     recTitle.textContent = 'Recommendation: DIY with crypto tax software';
     recBody.textContent = 'Your situation is simple enough that crypto tax software can handle it accurately. We recommend Koinly or CoinTracker — both generate IRS-ready reports for $49-$199. Save the CPA fee for when your situation gets more complex.';
-    recActions.innerHTML = '<a href="/" class="btn btn-secondary">Browse Software Options</a>';
+    
+    recActions.innerHTML = `
+      <a href="${koinlyLink}" target="_blank" rel="sponsored noopener noreferrer" class="btn" style="background:#10b981; color:#fff;">Get Koinly (10% Off) →</a>
+      <a href="${cointrackerLink}" target="_blank" rel="sponsored noopener noreferrer" class="btn btn-secondary">Try CoinTracker</a>
+    `;
   } else if (total <= 18) {
     box.classList.add('moderate');
     label.textContent = 'Moderate';
     desc.textContent = 'You have some complexity. Software alone may miss things.';
     recTitle.textContent = 'Recommendation: Software + one-hour CPA consultation';
     recBody.textContent = 'Use crypto tax software for the initial report, then hire a CPA for a one-hour review. This typically costs $200-$400 and catches mistakes worth 10x the fee. Find a generalist CPA in our directory who handles crypto.';
-    recActions.innerHTML = '<a href="/" class="btn btn-primary">Find a CPA</a>';
+    
+    recActions.innerHTML = `
+      <a href="${koinlyLink}" target="_blank" rel="sponsored noopener noreferrer" class="btn btn-secondary">Get Tax Software</a>
+      <a href="/crypto-tax-cpa/florida/" class="btn btn-primary">Find a CPA</a>
+    `;
   } else if (total <= 30) {
     box.classList.add('complex');
     label.textContent = 'Complex';
     desc.textContent = 'Your situation requires specialist knowledge. DIY is high-risk.';
     recTitle.textContent = 'Recommendation: Hire a crypto specialist CPA';
     recBody.textContent = 'Your activity crosses into territory where general software fails — DeFi, bridges, or significant transaction volume. A specialist CPA understands cost basis allocation across chains and will not miss deductions. Expect $500-$1,500 for a full-service engagement.';
-    recActions.innerHTML = '<a href="/" class="btn btn-primary">Find a Specialist</a>';
+    
+    recActions.innerHTML = `
+      <a href="/specializations/defi/" class="btn btn-primary">Find a DeFi Specialist</a>
+    `;
   } else {
     box.classList.add('risk');
     label.textContent = 'High-Risk';
     desc.textContent = 'You need professional help immediately. This is not DIY territory.';
     recTitle.textContent = 'Recommendation: Hire an audit-defense CPA immediately';
     recBody.textContent = 'The combination of activity you reported — especially IRS notices or privacy coin usage — creates significant audit risk. You need a CPA with specific IRS audit defense experience. Do not attempt to file on your own. Many of these firms offer free initial consultations.';
-    recActions.innerHTML = '<a href="/" class="btn btn-primary">Find an Audit Defense CPA</a>';
+    
+    recActions.innerHTML = `
+      <a href="/specializations/audit-defense/" class="btn btn-primary" style="background:#dc2626;">Find an Audit Defense CPA →</a>
+    `;
   }
   
   document.getElementById('result').classList.add('show');
