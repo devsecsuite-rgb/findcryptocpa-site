@@ -74,10 +74,13 @@ h1{font-size:2.5rem;letter-spacing:-.02em;font-weight:800;margin-bottom:1rem;lin
 .recommendation h3{font-size:1.25rem;font-weight:700;margin-bottom:1rem}
 .recommendation p{color:#475569;margin-bottom:1.5rem}
 .action-buttons{display:flex;gap:1rem;flex-wrap:wrap}
-footer{background:#0f172a;color:#94a3b8;padding:2rem 0;font-size:.9rem;text-align:center;margin-top:4rem}
-footer a{color:#94a3b8;margin:0 1rem}
+footer{background:#0f172a;color:#94a3b8;padding:3rem 0 2rem;font-size:.9rem;margin-top:4rem}
+footer .container{max-width:1200px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem}
+footer h4{color:#fff;font-size:.85rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:1rem;font-weight:700}
+footer a{color:#94a3b8;display:block;margin-bottom:.6rem}
 footer a:hover{color:#fff}
-@media(max-width:600px){h1{font-size:1.75rem}.score-num{font-size:3rem}.score-box{padding:2rem 1.5rem}.subhead{font-size:1rem}}
+.footer-bottom{grid-column:1/-1;padding-top:2rem;margin-top:1rem;border-top:1px solid #1e293b;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.85rem}
+@media(max-width:600px){h1{font-size:1.75rem}.score-num{font-size:3rem}.score-box{padding:2rem 1.5rem}.subhead{font-size:1rem}nav{display:none}}
 </style>
 </head>
 <body>
@@ -100,7 +103,10 @@ footer a:hover{color:#fff}
 <li style="margin-bottom:.5rem"><strong>Documentation:</strong> Whether you have exchange CSVs and wallet records ready</li>
 <li style="margin-bottom:.5rem"><strong>Risk score:</strong> Likelihood you would be flagged for an IRS crypto audit</li>
 </ul>
-<h3 style="font-size:1.15rem;font-weight:700;margin-bottom:.75rem;color:#0f172a">By the Numbers</h3>
+<!-- NEW INTERNAL LINK ADDED HERE -->
+<p style="margin-top: 1rem;"><strong>Curious about the cost of hiring a CPA?</strong> Read our guide on <a href="/guides/crypto-cpa-cost/">how much a crypto CPA costs in 2026</a> before you make a decision.</p>
+
+<h3 style="font-size:1.15rem;font-weight:700;margin-bottom:.75rem;color:#0f172a;margin-top:1.5rem;">By the Numbers</h3>
 <ul style="margin:0 0 0 1.25rem;color:#475569">
 <li style="margin-bottom:.5rem">Average completion time: <strong>60 seconds</strong></li>
 <li style="margin-bottom:.5rem">Number of questions: <strong>10 questions</strong></li>
@@ -215,22 +221,42 @@ footer a:hover{color:#fff}
 </div>
 </main>
 
-<!-- UPDATED FOOTER -->
+<!-- UPDATED FULL FOOTER -->
 <footer>
-<div class="container" style="display:flex; justify-content:center; flex-wrap:wrap; gap:1rem;">
-<a href="/">Home</a>
+<div class="container">
+<div>
+<h4>FindCryptoCPA</h4>
 <a href="/about/">About</a>
 <a href="/contact/">Contact</a>
 <a href="/methodology/">Methodology</a>
+<a href="/tool/">Complexity Tool</a>
+</div>
+<div>
+<h4>Specializations</h4>
 <a href="/specializations/defi/">DeFi</a>
-<a href="/specializations/audit-defense/">Audit Defense</a>
-<a href="/privacy/">Privacy</a>
-<a href="/terms/">Terms</a>
-<p style="margin-top:1rem; width:100%;">© 2026 FindCryptoCPA</p>
+<a href="/specializations/nft/">NFTs</a>
+<a href="/specializations/mining-staking/">Mining & Staking</a>
+<a href="/specializations/audit-defense/">IRS Audit Defense</a>
+<a href="/specializations/business/">Business</a>
+<a href="/specializations/trading/">Active Trading</a>
+<a href="/specializations/international/">International</a>
+<a href="/specializations/individuals/">Individuals</a>
+</div>
+<div>
+<h4>Top States</h4>
+<a href="/crypto-tax-cpa/california/">California</a>
+<a href="/crypto-tax-cpa/new-york/">New York</a>
+<a href="/crypto-tax-cpa/texas/">Texas</a>
+<a href="/crypto-tax-cpa/florida/">Florida</a>
+<a href="/crypto-tax-cpa/washington/">Washington</a>
+</div>
+<div class="footer-bottom">
+<div>© 2026 FindCryptoCPA. All rights reserved.</div>
+<div>Not affiliated with the IRS or any government agency.</div>
+</div>
 </div>
 </footer>
 
-<!-- UPDATED SCRIPT WITH AFFILIATE LINKS -->
 <script>
 const answers = new Array(10).fill(null);
 let currentQ = 0;
@@ -281,20 +307,20 @@ function showResult() {
   num.textContent = total;
   box.className = 'score-box';
   
-  // ⚠️ REPLACE THESE URLS WITH YOUR ACTUAL AFFILIATE LINKS FROM YOUR DASHBOARD
+  // ⚠️ YOUR AFFILIATE LINKS
   const koinlyLink = "https://koinly.io/?via=6AD55A5A&utm_source=affiliate"; 
-  const cointrackerLink = "https://coinledger.io?fpr=tool";
+  const coinledgerLink = "https://coinledger.io?fpr=tool";
 
   if (total <= 8) {
     box.classList.add('simple');
     label.textContent = 'Simple';
     desc.textContent = 'Your crypto activity is straightforward. You likely do not need a CPA.';
     recTitle.textContent = 'Recommendation: DIY with crypto tax software';
-    recBody.textContent = 'Your situation is simple enough that crypto tax software can handle it accurately. We recommend Koinly or CoinTracker — both generate IRS-ready reports for $49-$199. Save the CPA fee for when your situation gets more complex.';
+    recBody.textContent = 'Your situation is simple enough that crypto tax software can handle it accurately. We recommend Koinly or CoinLedger — both generate IRS-ready reports for $49-$199. Save the CPA fee for when your situation gets more complex.';
     
     recActions.innerHTML = `
       <a href="${koinlyLink}" target="_blank" rel="sponsored noopener noreferrer" class="btn" style="background:#10b981; color:#fff;">Get Koinly (10% Off) →</a>
-      <a href="${cointrackerLink}" target="_blank" rel="sponsored noopener noreferrer" class="btn btn-secondary">Try CoinTracker</a>
+      <a href="${coinledgerLink}" target="_blank" rel="sponsored noopener noreferrer" class="btn btn-secondary">Try CoinLedger</a>
     `;
   } else if (total <= 18) {
     box.classList.add('moderate');
