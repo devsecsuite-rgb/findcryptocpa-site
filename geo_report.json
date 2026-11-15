@@ -1,6 +1,6 @@
 {
   "site": "https://findcryptocpa.com",
-  "audited_at": "2026-11-14T22:10:43Z",
+  "audited_at": "2026-11-14T22:15:51Z",
   "robots": {
     "blocked": []
   },
@@ -8,7 +8,7 @@
     "found": true,
     "lines": 14
   },
-  "avg_citability": 84.56521739130434,
+  "avg_citability": 85.8695652173913,
   "pages": [
     {
       "url": "https://findcryptocpa.com/",
@@ -16,11 +16,11 @@
         "WebSite",
         "Organization"
       ],
-      "direct_answers": 8,
-      "citability_score": 70,
+      "direct_answers": 7,
+      "citability_score": 90,
       "citability_notes": [
-        "No data tables found (AI prefers structured data)",
-        "Only 1 statistics found (AI engines prefer data)",
+        "1 data table(s) found (Great for AI)",
+        "5 statistics found",
         "Only 0 lists (AI engines prefer bullet points)",
         "No authoritative (.gov/.edu) outbound links found"
       ]
@@ -144,13 +144,13 @@
         "Article",
         "FAQPage"
       ],
-      "direct_answers": 10,
-      "citability_score": 85,
+      "direct_answers": 9,
+      "citability_score": 90,
       "citability_notes": [
-        "1 data table(s) found (Great for AI)",
+        "2 data table(s) found (Great for AI)",
         "Only 0 statistics found (AI engines prefer data)",
         "2 lists found",
-        "No authoritative (.gov/.edu) outbound links found"
+        "1 authoritative outbound links (.gov/.edu) found"
       ]
     },
     {
@@ -160,12 +160,12 @@
         "FAQPage"
       ],
       "direct_answers": 9,
-      "citability_score": 80,
+      "citability_score": 85,
       "citability_notes": [
         "1 data table(s) found (Great for AI)",
         "Only 1 statistics found (AI engines prefer data)",
         "Only 1 lists (AI engines prefer bullet points)",
-        "No authoritative (.gov/.edu) outbound links found"
+        "1 authoritative outbound links (.gov/.edu) found"
       ]
     },
     {
