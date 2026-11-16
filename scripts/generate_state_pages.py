@@ -9,7 +9,7 @@ OUT = ROOT / "crypto-tax-cpa"
 HOMEPAGE = ROOT / "index.html"
 
 def load_csv(path):
-    with open(path, newline='', encoding='utf-8') as f:
+    with open(path, newline='', encoding='utf-8-sig', errors='replace') as f:
         return list(csv.DictReader(f))
 
 def build_cpa_card(c):

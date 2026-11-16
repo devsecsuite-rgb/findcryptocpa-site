@@ -20,8 +20,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FwLYPCBN7B"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FwLYPCBN7B');</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FWLYPCBN7B"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FWLYPCBN7B');</script>
 
 <!-- Dynamic Schemas injected by Python -->
 {{CPA_SCHEMA}}
@@ -54,6 +54,11 @@ section{padding:3rem 0}
 .tax-notes-box h2{font-size:1.35rem;font-weight:800;color:#1e3a8a;margin-bottom:.75rem;border-bottom:1px solid #bfdbfe;padding-bottom:.5rem}
 .tax-notes-box p{color:#1e40af;font-size:1.05rem;line-height:1.7}
 
+/* Audit Triggers Box (NEW) */
+.audit-box{background:#fef2f2;border-left:4px solid #dc2626;padding:1.5rem;border-radius:0 8px 8px 0;margin-bottom:2.5rem}
+.audit-box h2{font-size:1.35rem;font-weight:800;color:#991b1b;margin-bottom:.75rem;border-bottom:1px solid #fecaca;padding-bottom:.5rem}
+.audit-box p{color:#7f1d1d;font-size:1.05rem;line-height:1.7}
+
 .cpa-card{background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;transition:all .15s}
 .cpa-card:hover{border-color:#cbd5e1;box-shadow:0 4px 12px rgba(15,23,42,.06)}
 .cpa-header{display:flex;align-items:center;gap:.85rem;margin-bottom:1rem}
@@ -72,6 +77,12 @@ section{padding:3rem 0}
 .info-box p{color:#475569;margin-bottom:.75rem}
 .info-box ul{margin:0 0 1rem 1.25rem;color:#475569}
 .info-box li{margin-bottom:.5rem}
+
+/* NEW: Data Table for Statistics */
+.data-table{width:100%; border-collapse:collapse; margin-bottom:2rem; background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,0.1);}
+.data-table th, .data-table td{padding:12px; text-align:left; border-bottom:1px solid #e2e8f0;}
+.data-table th{background:#f8fafc; font-weight:700; color:#0f172a; width:50%;}
+.data-table tr:last-child td{border-bottom:none;}
 
 /* FAQ Styles for Extractability */
 .faq-section { margin-top: 2.5rem; }
@@ -120,22 +131,30 @@ footer a:hover{color:#fff}
 <section>
 <div class="container">
 
-<!-- NEW: State Tax Notes Section -->
+<!-- State Tax Notes Section -->
 <div class="tax-notes-box">
 <h2>Crypto Tax Rules in {{STATE_NAME}}</h2>
 <p>{{STATE_TAX_NOTES}}</p>
 </div>
 
+<!-- NEW: State Audit Triggers Section -->
+<div class="audit-box">
+<h2>{{STATE_NAME}} Audit Triggers & Enforcement</h2>
+<p>{{STATE_AUDIT_TRIGGERS}}</p>
+</div>
+
 {{CPA_SECTION}}
 
 <div class="info-box">
-<h3>{{STATE_NAME}} Crypto Tax: Key Statistics</h3>
-<ul>
-<li><strong>{{STATE_NAME}} top income tax rate:</strong> {{STATE_TAX_RATE}}</li>
-<li><strong>Estimated crypto holders in {{STATE_NAME}}:</strong> {{CRYPTO_HOLDERS}}</li>
-<li><strong>Average crypto CPA fee in {{STATE_NAME}}:</strong> {{CPA_FEE_RANGE}}</li>
-<li><strong>{{STATE_TAX_AUTHORITY}} crypto audit rate:</strong> {{AUDIT_RATE_NOTE}}</li>
-</ul>
+<h3>{{STATE_NAME}} Crypto Tax Snapshot</h3>
+<!-- UPDATED TO A TABLE FOR BETTER AI EXTRACTABILITY -->
+<table class="data-table">
+<tr><th>State Income Tax Rate</th><td>{{STATE_TAX_RATE}}</td></tr>
+<tr><th>Estimated Crypto Holders</th><td>{{CRYPTO_HOLDERS}}</td></tr>
+<tr><th>Average Crypto CPA Fee</th><td>{{CPA_FEE_RANGE}}</td></tr>
+<tr><th>Tax Authority</th><td>{{STATE_TAX_AUTHORITY}}</td></tr>
+<tr><th>Recent Audit Trend</th><td>{{AUDIT_RATE_NOTE}}</td></tr>
+</table>
 
 <h3>What to Look For in a {{STATE_NAME}} Crypto CPA</h3>
 <ul>
@@ -143,7 +162,7 @@ footer a:hover{color:#fff}
 </ul>
 </div>
 
-<!-- NEW: Styled FAQ Section -->
+<!-- FAQ Section -->
 <div class="faq-section">
 <h2>Frequently Asked Questions: {{STATE_NAME}} Crypto Taxes</h2>
 {{STATE_FAQ}}
