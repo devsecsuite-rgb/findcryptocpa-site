@@ -1,0 +1,359 @@
+{
+  "overall_score": 17.9,
+  "coverage_score": 51.4,
+  "arch_score": 0,
+  "trust_score": 12.5,
+  "focus_score": 0,
+  "orphans": [
+    "https://findcryptocpa.com/about/",
+    "https://findcryptocpa.com/contact/",
+    "https://findcryptocpa.com/privacy/",
+    "https://findcryptocpa.com/specializations/business/",
+    "https://findcryptocpa.com/specializations/individuals/",
+    "https://findcryptocpa.com/specializations/international/",
+    "https://findcryptocpa.com/specializations/mining-staking/",
+    "https://findcryptocpa.com/specializations/trading/",
+    "https://findcryptocpa.com/terms/"
+  ],
+  "cannibalization": [
+    {
+      "page_a": "https://findcryptocpa.com/specializations/business/",
+      "page_b": "https://findcryptocpa.com/specializations/individuals/",
+      "similarity": 0.8
+    },
+    {
+      "page_a": "https://findcryptocpa.com/specializations/business/",
+      "page_b": "https://findcryptocpa.com/specializations/mining-staking/",
+      "similarity": 0.77
+    },
+    {
+      "page_a": "https://findcryptocpa.com/specializations/business/",
+      "page_b": "https://findcryptocpa.com/specializations/nft/",
+      "similarity": 0.85
+    },
+    {
+      "page_a": "https://findcryptocpa.com/specializations/business/",
+      "page_b": "https://findcryptocpa.com/specializations/trading/",
+      "similarity": 0.79
+    },
+    {
+      "page_a": "https://findcryptocpa.com/specializations/individuals/",
+      "page_b": "https://findcryptocpa.com/specializations/international/",
+      "similarity": 0.73
+    },
+    {
+      "page_a": "https://findcryptocpa.com/specializations/individuals/",
+      "page_b": "https://findcryptocpa.com/specializations/mining-staking/",
+      "similarity": 0.77
+    },
+    {
+      "page_a": "https://findcryptocpa.com/specializations/individuals/",
+      "page_b": "https://findcryptocpa.com/specializations/nft/",
+      "similarity": 0.83
+    },
+    {
+      "page_a": "https://findcryptocpa.com/specializations/individuals/",
+      "page_b": "https://findcryptocpa.com/specializations/trading/",
+      "similarity": 0.77
+    },
+    {
+      "page_a": "https://findcryptocpa.com/specializations/mining-staking/",
+      "page_b": "https://findcryptocpa.com/specializations/nft/",
+      "similarity": 0.77
+    },
+    {
+      "page_a": "https://findcryptocpa.com/specializations/mining-staking/",
+      "page_b": "https://findcryptocpa.com/specializations/trading/",
+      "similarity": 0.8
+    },
+    {
+      "page_a": "https://findcryptocpa.com/specializations/nft/",
+      "page_b": "https://findcryptocpa.com/specializations/trading/",
+      "similarity": 0.81
+    }
+  ],
+  "details": {
+    "https://findcryptocpa.com/": {
+      "url": "https://findcryptocpa.com/",
+      "title": "FindCryptoCPA: Find a Verified Crypto Tax CPA",
+      "h1": "Find a VerifiedCrypto Tax CPA",
+      "word_count": 366,
+      "internal_links": [
+        "https://findcryptocpa.com/crypto-tax-cpa/california/",
+        "https://findcryptocpa.com/crypto-tax-cpa/texas/",
+        "https://findcryptocpa.com/specializations/audit-defense/",
+        "https://findcryptocpa.com/tool/",
+        "https://findcryptocpa.com/crypto-tax-cpa/illinois/",
+        "https://findcryptocpa.com/guides/irs-letter-6174/",
+        "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
+        "https://findcryptocpa.com/crypto-tax-cpa/washington/",
+        "https://findcryptocpa.com/guides/crypto-cpa-cost/",
+        "https://findcryptocpa.com/specializations/defi/",
+        "https://findcryptocpa.com/crypto-tax-cpa/florida/",
+        "https://findcryptocpa.com/specializations/nft/",
+        "https://findcryptocpa.com/guides/defi-taxes/"
+      ],
+      "has_author": false,
+      "has_date": false
+    },
+    "https://findcryptocpa.com/about/": {
+      "url": "https://findcryptocpa.com/about/",
+      "title": "About FindCryptoCPA \u2014 Crypto Tax CPA Directory",
+      "h1": "About FindCryptoCPA",
+      "word_count": 466,
+      "internal_links": [
+        "https://findcryptocpa.com/cdn-cgi/l/email-protection"
+      ],
+      "has_author": false,
+      "has_date": false
+    },
+    "https://findcryptocpa.com/contact/": {
+      "url": "https://findcryptocpa.com/contact/",
+      "title": "Contact FindCryptoCPA \u2014 Submit a CPA or Get in Touch",
+      "h1": "Contact",
+      "word_count": 337,
+      "internal_links": [
+        "https://findcryptocpa.com/cdn-cgi/l/email-protection"
+      ],
+      "has_author": false,
+      "has_date": false
+    },
+    "https://findcryptocpa.com/crypto-tax-cpa/california/": {
+      "url": "https://findcryptocpa.com/crypto-tax-cpa/california/",
+      "title": "Crypto Tax CPA in California - FindCryptoCPA",
+      "h1": "Crypto Tax CPAs inCalifornia",
+      "word_count": 575,
+      "internal_links": [
+        "https://findcryptocpa.com/tool/"
+      ],
+      "has_author": false,
+      "has_date": false
+    },
+    "https://findcryptocpa.com/crypto-tax-cpa/florida/": {
+      "url": "https://findcryptocpa.com/crypto-tax-cpa/florida/",
+      "title": "Crypto Tax CPA in Florida - FindCryptoCPA",
+      "h1": "Crypto Tax CPAs inFlorida",
+      "word_count": 488,
+      "internal_links": [
+        "https://findcryptocpa.com/tool/"
+      ],
+      "has_author": false,
+      "has_date": false
+    },
+    "https://findcryptocpa.com/crypto-tax-cpa/illinois/": {
+      "url": "https://findcryptocpa.com/crypto-tax-cpa/illinois/",
+      "title": "Crypto Tax CPA in Illinois - FindCryptoCPA",
+      "h1": "Crypto Tax CPAs inIllinois",
+      "word_count": 473,
+      "internal_links": [
+        "https://findcryptocpa.com/tool/"
+      ],
+      "has_author": false,
+      "has_date": false
+    },
+    "https://findcryptocpa.com/crypto-tax-cpa/new-york/": {
+      "url": "https://findcryptocpa.com/crypto-tax-cpa/new-york/",
+      "title": "Crypto Tax CPA in New York - FindCryptoCPA",
+      "h1": "Crypto Tax CPAs inNew York",
+      "word_count": 555,
+      "internal_links": [
+        "https://findcryptocpa.com/tool/"
+      ],
+      "has_author": false,
+      "has_date": false
+    },
+    "https://findcryptocpa.com/crypto-tax-cpa/texas/": {
+      "url": "https://findcryptocpa.com/crypto-tax-cpa/texas/",
+      "title": "Crypto Tax CPA in Texas - FindCryptoCPA",
+      "h1": "Crypto Tax CPAs inTexas",
+      "word_count": 423,
+      "internal_links": [
+        "https://findcryptocpa.com/tool/"
+      ],
+      "has_author": false,
+      "has_date": false
+    },
+    "https://findcryptocpa.com/crypto-tax-cpa/washington/": {
+      "url": "https://findcryptocpa.com/crypto-tax-cpa/washington/",
+      "title": "Crypto Tax CPA in Washington - FindCryptoCPA",
+      "h1": "Crypto Tax CPAs inWashington",
+      "word_count": 507,
+      "internal_links": [
+        "https://findcryptocpa.com/tool/"
+      ],
+      "has_author": false,
+      "has_date": false
+    },
+    "https://findcryptocpa.com/guides/crypto-cpa-cost/": {
+      "url": "https://findcryptocpa.com/guides/crypto-cpa-cost/",
+      "title": "How Much Does a Crypto Tax CPA Cost in 2026? | FindCryptoCPA",
+      "h1": "How Much Does a Crypto Tax CPA Cost in 2026?",
+      "word_count": 791,
+      "internal_links": [
+        "https://findcryptocpa.com/tool/"
+      ],
+      "has_author": true,
+      "has_date": true
+    },
+    "https://findcryptocpa.com/guides/defi-taxes/": {
+      "url": "https://findcryptocpa.com/guides/defi-taxes/",
+      "title": "DeFi Taxes: The Ultimate 2026 Guide to Yield Farming & LPs",
+      "h1": "DeFi Taxes: The Ultimate Guide for 2026",
+      "word_count": 920,
+      "internal_links": [
+        "https://findcryptocpa.com/specializations/defi/"
+      ],
+      "has_author": true,
+      "has_date": true
+    },
+    "https://findcryptocpa.com/guides/irs-letter-6174/": {
+      "url": "https://findcryptocpa.com/guides/irs-letter-6174/",
+      "title": "IRS Letter 6174: What It Means & How to Respond (2026 Guide)",
+      "h1": "IRS Letter 6174: What It Means and How to Respond",
+      "word_count": 714,
+      "internal_links": [
+        "https://findcryptocpa.com/specializations/audit-defense/"
+      ],
+      "has_author": true,
+      "has_date": true
+    },
+    "https://findcryptocpa.com/privacy/": {
+      "url": "https://findcryptocpa.com/privacy/",
+      "title": "Privacy Policy \u2014 FindCryptoCPA",
+      "h1": "Privacy Policy",
+      "word_count": 418,
+      "internal_links": [
+        "https://findcryptocpa.com",
+        "https://findcryptocpa.com/cdn-cgi/l/email-protection"
+      ],
+      "has_author": false,
+      "has_date": true
+    },
+    "https://findcryptocpa.com/specializations/audit-defense/": {
+      "url": "https://findcryptocpa.com/specializations/audit-defense/",
+      "title": "Crypto Tax Audit Defense CPA | IRS Notice Help \u2014 FindCryptoCPA",
+      "h1": "IRS Crypto Audit DefenseCPAs",
+      "word_count": 860,
+      "internal_links": [
+        "https://findcryptocpa.com/tool/",
+        "https://findcryptocpa.com/guides/irs-letter-6174/"
+      ],
+      "has_author": false,
+      "has_date": false
+    },
+    "https://findcryptocpa.com/specializations/business/": {
+      "url": "https://findcryptocpa.com/specializations/business/",
+      "title": "Business Crypto Tax CPA \u2014 FindCryptoCPA",
+      "h1": "Business Crypto TaxCPAs",
+      "word_count": 537,
+      "internal_links": [
+        "https://findcryptocpa.com/tool/"
+      ],
+      "has_author": false,
+      "has_date": false
+    },
+    "https://findcryptocpa.com/specializations/defi/": {
+      "url": "https://findcryptocpa.com/specializations/defi/",
+      "title": "DeFi Crypto Tax CPA | Yield Farming Specialists",
+      "h1": "DeFi Crypto TaxCPAs",
+      "word_count": 697,
+      "internal_links": [
+        "https://findcryptocpa.com/tool/",
+        "https://findcryptocpa.com/guides/defi-taxes/"
+      ],
+      "has_author": false,
+      "has_date": false
+    },
+    "https://findcryptocpa.com/specializations/individuals/": {
+      "url": "https://findcryptocpa.com/specializations/individuals/",
+      "title": "Individual Crypto Tax CPA \u2014 FindCryptoCPA",
+      "h1": "Crypto Tax CPAs forIndividuals",
+      "word_count": 520,
+      "internal_links": [
+        "https://findcryptocpa.com/tool/"
+      ],
+      "has_author": false,
+      "has_date": false
+    },
+    "https://findcryptocpa.com/specializations/international/": {
+      "url": "https://findcryptocpa.com/specializations/international/",
+      "title": "International Crypto Tax CPA (FBAR/FATCA) \u2014 FindCryptoCPA",
+      "h1": "International Crypto TaxCPAs",
+      "word_count": 535,
+      "internal_links": [
+        "https://findcryptocpa.com/tool/"
+      ],
+      "has_author": false,
+      "has_date": false
+    },
+    "https://findcryptocpa.com/specializations/mining-staking/": {
+      "url": "https://findcryptocpa.com/specializations/mining-staking/",
+      "title": "Mining & Staking Crypto Tax CPA \u2014 FindCryptoCPA",
+      "h1": "Mining & Staking Crypto TaxCPAs",
+      "word_count": 501,
+      "internal_links": [
+        "https://findcryptocpa.com/tool/"
+      ],
+      "has_author": false,
+      "has_date": false
+    },
+    "https://findcryptocpa.com/specializations/nft/": {
+      "url": "https://findcryptocpa.com/specializations/nft/",
+      "title": "NFT Crypto Tax CPA \u2014 FindCryptoCPA",
+      "h1": "NFT Crypto TaxCPAs",
+      "word_count": 464,
+      "internal_links": [
+        "https://findcryptocpa.com/tool/"
+      ],
+      "has_author": false,
+      "has_date": false
+    },
+    "https://findcryptocpa.com/specializations/trading/": {
+      "url": "https://findcryptocpa.com/specializations/trading/",
+      "title": "Active Trading Crypto Tax CPA \u2014 FindCryptoCPA",
+      "h1": "Active Trading Crypto TaxCPAs",
+      "word_count": 536,
+      "internal_links": [
+        "https://findcryptocpa.com/tool/"
+      ],
+      "has_author": false,
+      "has_date": false
+    },
+    "https://findcryptocpa.com/terms/": {
+      "url": "https://findcryptocpa.com/terms/",
+      "title": "Terms of Service \u2014 FindCryptoCPA",
+      "h1": "Terms of Service",
+      "word_count": 493,
+      "internal_links": [
+        "https://findcryptocpa.com/cdn-cgi/l/email-protection"
+      ],
+      "has_author": false,
+      "has_date": true
+    },
+    "https://findcryptocpa.com/thank-you/": {
+      "url": "https://findcryptocpa.com/thank-you/",
+      "title": "Thank You for Contacting FindCryptoCPA",
+      "h1": "Thank you",
+      "word_count": 291,
+      "internal_links": [
+        "https://findcryptocpa.com/",
+        "https://findcryptocpa.com/tool/",
+        "https://findcryptocpa.com/guides/irs-letter-6174/",
+        "https://findcryptocpa.com/guides/defi-taxes/"
+      ],
+      "has_author": false,
+      "has_date": false
+    },
+    "https://findcryptocpa.com/tool/": {
+      "url": "https://findcryptocpa.com/tool/",
+      "title": "Do I Need a Crypto Tax CPA? \u2014 Free Complexity Score Tool",
+      "h1": "Do you need a crypto tax CPA?",
+      "word_count": 362,
+      "internal_links": [
+        "https://findcryptocpa.com/guides/crypto-cpa-cost/"
+      ],
+      "has_author": false,
+      "has_date": false
+    }
+  }
+}
