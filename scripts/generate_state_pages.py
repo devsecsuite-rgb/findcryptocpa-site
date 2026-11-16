@@ -181,6 +181,7 @@ def main():
             '{{AUDIT_RATE_NOTE}}': s.get('audit_rate_note', '').strip(),
             '{{STATE_CPA_CRITERIA}}': build_criteria(s.get('state_cpa_criteria', '')),
             '{{STATE_TAX_NOTES}}': tax_notes,
+            '{{STATE_AUDIT_TRIGGERS}}': s.get('audit_triggers', 'No specific state audit triggers available at this time.').strip(),
             '{{STATE_FAQ}}': build_faq_html(state_faqs),
             '{{FAQ_SCHEMA}}': build_faq_schema(state_faqs),
             '{{CPA_SCHEMA}}': build_cpa_schema(state_cpas, state_name)
